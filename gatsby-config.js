@@ -4,6 +4,8 @@ module.exports = {
     description: "Experience is the ultimate source of value",
     author: `David Rönnlid`,
   },
+  pathPrefix: "/ronnlid-websites-cms",
+
   plugins: [
     "gatsby-plugin-styled-components",
     `gatsby-plugin-react-helmet`,
@@ -16,7 +18,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    pathPrefix: "/gh",
     {
       resolve: "gatsby-transformer-remark",
       options: {
