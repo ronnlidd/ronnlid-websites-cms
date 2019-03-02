@@ -20,6 +20,16 @@ const HeaderContainer = styled.div`
   position: relative;
 `
 
+const MainNav = styled.nav`
+  ul {
+    list-style: none;
+    li > a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+`
+
 export default class Header extends Component {
   componentDidMount = (prevProps, prevState) => {
     const { location } = this.props
@@ -41,7 +51,7 @@ export default class Header extends Component {
   }
 
   render() {
-    const { siteTitle, background } = this.props
+    const { siteTitle, background } = this.props //destructure logo when using it
 
     return (
       <header>
@@ -57,9 +67,16 @@ export default class Header extends Component {
                 textDecoration: `none`,
               }}
             >
+              {/* <Img
+                fluid={logo}
+                style={{
+                  width: "100px",
+                  height: "100px",
+                }}
+              />{" "} */}
               <h1>{siteTitle}</h1>
             </Link>
-            <nav>
+            <MainNav>
               <ul>
                 <li>
                   <Link to="/">Home</Link>
@@ -68,7 +85,7 @@ export default class Header extends Component {
                   <Link to="/about">About</Link>
                 </li>
               </ul>
-            </nav>
+            </MainNav>
           </HeaderContainer>
 
           <Img

@@ -22,7 +22,7 @@ const Layout = ({ children, location }) => (
             description
           }
         }
-        logo: file(relativePath: { eq: "backg.jpg" }) {
+        background: file(relativePath: { eq: "backg.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid
@@ -31,16 +31,25 @@ const Layout = ({ children, location }) => (
         }
       }
     `}
+    // logo: file(relativePath: { eq: "newLogov3.png" }) {
+    //   childImageSharp {
+    //     fluid(maxWidth: 1000) {
+    //       ...GatsbyImageSharpFluid
+    //     }
+    //   }
+    // }
+
     render={data => (
       <>
         <Header
           siteTitle={data.site.siteMetadata.title}
-          background={data.logo.childImageSharp.fluid}
+          // logo={data.logo.childImageSharp.fluid}
+          background={data.background.childImageSharp.fluid}
           location={location}
         />
 
-        <main>{children}</main>
-        <footer>
+        <main style={{ width: "80%", margin: "0 auto" }}>{children}</main>
+        <footer style={{ width: "80%", margin: "0 auto" }}>
           © {new Date().getFullYear()}, Ronnlid Websites, David Rönnlid
         </footer>
       </>

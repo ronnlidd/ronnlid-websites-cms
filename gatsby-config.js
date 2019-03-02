@@ -16,6 +16,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    pathPrefix: "/gh",
     {
       resolve: "gatsby-transformer-remark",
       options: {
