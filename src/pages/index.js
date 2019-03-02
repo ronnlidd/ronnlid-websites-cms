@@ -8,10 +8,11 @@ import PostListing from "../components/PostListing"
 const IndexPage = ({ data, location }) => (
   <Layout location={location}>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Posts</h1>
     <h2>
       I belive that <i>{data.site.siteMetadata.description}</i>
     </h2>
+    <h1>Posts</h1>
+
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <PostListing key={node.id} post={node} />
     ))}

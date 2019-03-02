@@ -3,9 +3,12 @@ module.exports = {
     title: `Ronnlid Websites`,
     description: "Experience is the ultimate source of value",
     author: `David Rönnlid`,
+    siteUrl: "https://ronnlidwebsites.netlify.com/",
   },
   plugins: [
-    "gatsby-plugin-styled-components",
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -29,20 +32,20 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `ronnlid-websites`,
-    //     short_name: `rw`,
-    //     start_url: `/`,
-    //     background_color: `#e50914`,
-    //     theme_color: `#4285f4`,
-    //     display: `minimal-ui`,
-    //     icon: `src/images/newLogov3.jpg`, // This path is relative to the root of the site.
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ronnlid Websites`,
+        short_name: `RW`,
+        start_url: `/`,
+        background_color: `#e50914`,
+        theme_color: `#4285f4`,
+        display: `minimal-ui`,
+        icon: `src/images/newLogov3.jpg`, // This path is relative to the root of the site.
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    "gatsby-plugin-offline",
   ],
 }
