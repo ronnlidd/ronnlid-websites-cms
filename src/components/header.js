@@ -100,9 +100,6 @@ export default class Header extends Component {
                   <Link to="/posts">Blog</Link>
                 </li>
                 <li>
-                  <Link to="/about">About</Link>
-                </li>
-                <li>
                   <Link to="/contact">Contact</Link>
                 </li>
               </ul>

@@ -9,8 +9,10 @@ export default class IndexPage extends Component {
       <Layout location={location}>
         <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
         <div>
-          <h1>About Ronnlid Websites</h1>
-          <p>Website selling websites to start-ups</p>
+          <h1>Buy</h1>
+          <a href="mailto:david@ronnlidwebsites.com">
+            Send me requirements/wants
+          </a>
         </div>
       </Layout>
     )
