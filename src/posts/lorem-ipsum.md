@@ -1,5 +1,4 @@
 ---
-path: /posts/lorem
 date: 2019-03-02T15:52:30.165Z
 title: Lorem Ipsum
 ---

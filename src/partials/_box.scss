@@ -1,0 +1,66 @@
+@import "size";
+@import "border";
+@import "color";
+@import "box-shadow";
+
+@mixin responsive-box($BG: $netflix-white, $border-color: $netflix-black) {
+  @media (max-width: $sm-mq-max) {
+    @include sm-rem-padding;
+    background: #{$BG};
+    @include solid-border(0.5px, #{$border-color});
+  }
+
+  @media (min-width: $md-mq-min) {
+    @include md-rem-padding;
+    background: #{$BG};
+    @include solid-border(1px, #{$border-color});
+  }
+
+  @media (min-width: $lg-mq-min) {
+    @include lg-rem-padding;
+    background: #{$BG};
+    @include solid-border(2px, #{$border-color});
+  }
+}
+
+@mixin responsive-button($BG: $netflix-white, $border-color: $netflix-black) {
+  @media (max-width: $sm-mq-max) {
+    @include sm-btn;
+    background: #{$BG};
+    @include solid-border(1px, #{$border-color});
+    @include text(0.6, center);
+  }
+
+  @media (min-width: $md-mq-min) {
+    @include md-btn;
+    background: #{$BG};
+    @include solid-border(1px, #{$border-color});
+    @include text(0.6, center);
+  }
+
+  @media (min-width: $lg-mq-min) {
+    @include lg-btn;
+    background: #{$BG};
+    @include solid-border(1px, #{$border-color});
+    @include text(0.3, center);
+  }
+}
+
+@mixin buttonHover() {
+  cursor: pointer;
+  background: $netflix-red;
+  color: $netflix-black;
+  text-decoration: underline;
+  box-shadow: none;
+}
+
+@mixin stdBtn {
+  padding: 2vw;
+  background: $google-blue;
+  color: $netflix-white;
+  @include solid-border(2px, $netflix-black);
+  width: 100%;
+  margin: 0 auto;
+  @include BS-slight-down;
+  text-decoration: none;
+}

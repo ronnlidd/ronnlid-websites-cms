@@ -30,7 +30,10 @@ export const query = graphql`
       }
     }
 
-    allMarkdownRemark {
+    allMarkdownRemark(
+      limit: 4
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           id

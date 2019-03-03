@@ -1,0 +1,70 @@
+// Sizes
+$sm-rem: 1rem;
+$md-rem: 2rem;
+$lg-rem: 4rem;
+
+// Media Queries
+$sm-mq-max: 640px; //Always use max-width
+
+$md-mq-min: 641px; //Always use min-width
+
+$lg-mq-min: 1025px; //Always use min-width
+
+// // NOT WORKING:!
+
+// @mixin responsive-size($attr) {
+//   // @media screen and (max-width: 640px) {
+//   //   $attr: $sm-rem * #{$multiply};
+//   // }
+
+//   $attr: $md-rem;
+//   // @media screen and (min-width: $md-mq-min) {
+//   //   $attr: $md-rem * #{$multiply};
+//   // }
+
+//   // @media screen and (min-width: $lg-mq-min) {
+//   //   $attr: $lg-rem * #{$multiply};
+//   // }
+// }
+
+// Buttons
+@mixin sm-btn {
+  padding: 4vw;
+  width: 28vw;
+}
+
+@mixin md-btn {
+  padding: 0.8rem;
+  width: 14rem;
+}
+
+@mixin lg-btn {
+  padding: 1.6rem;
+  width: 18rem;
+}
+
+// Paddings
+@mixin sm-rem-padding() {
+  padding: $sm-rem;
+}
+
+@mixin md-rem-padding() {
+  padding: $md-rem;
+}
+
+@mixin lg-rem-padding() {
+  padding: $lg-rem;
+}
+
+// Margins
+@mixin sm-rem-margin() {
+  margin: $sm-rem;
+}
+
+@mixin md-rem-margin() {
+  margin: $md-rem;
+}
+
+@mixin lg-rem-margin() {
+  margin: $lg-rem;
+}

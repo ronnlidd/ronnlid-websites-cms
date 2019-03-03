@@ -1,64 +1,76 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React, { Component } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import ReactDOM from "react-dom"
 
 const HeaderWrapper = styled.div`
-  background: purple;
+  background: #586789;
   margin-bottom: 1.45rem;
   overflow: hidden;
   position: relative;
-  height: ${({ isHome }) => (isHome ? "40vh" : "20vh")};
+  height: "18vh";
+  border-bottom: 0.25rem ridge gold;
+  box-shadow: 0 4px 4px rgb(0, 0, 0);
 `
 const HeaderContainer = styled.div`
   margin: 0 auto;
-  max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  padding: 0.85rem 0;
   z-index: 2;
   position: relative;
 `
 
 const MainNav = styled.nav`
   ul {
+    float: right;
+    display: flex;
+    align-items: flex-start;
+    justify-items: flex-start;
     list-style: none;
-    li > a {
-      text-decoration: none;
-      color: white;
+    padding: 6px 6px 6px 0;
+    border: 1px solid gold;
+    border-right: none;
+    background: black;
+
+    li {
+      padding: 2px;
+      border-bottom: 2px ridge gold;
+      margin-left: 20px;
+      box-shadow: 0 1px 1px rgb(0, 0, 0);
+      -webkit-transition: border-bottom 0.3s;
+      transition: border-bottom 0.3s;
+      :hover {
+        a {
+          color: gold;
+        }
+        border-bottom: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+    .buyButton {
+      border-bottom-color: white;
+      & a {
+        color: gold;
+      }
+      & :hover {
+        a {
+          color: lightblue;
+        }
+      }
     }
   }
 `
 
 export default class Header extends Component {
-  componentDidMount = (prevProps, prevState) => {
-    const { location } = this.props
-    if (location.pathname === "/") {
-      this.wrapper.animate([{ height: "20vh" }, { height: "40vh" }], {
-        duration: 200,
-        fill: "forwards",
-        easing: "linear",
-        iterations: 1,
-      })
-    } else {
-      this.wrapper.animate([{ height: "40vh" }, { height: "20vh" }], {
-        duration: 200,
-        fill: "forwards",
-        easing: "linear",
-        iterations: 1,
-      })
-    }
-  }
-
   render() {
-    const { siteTitle, background } = this.props //destructure logo when using it
+    const { background, logo } = this.props
 
     return (
       <header>
-        <HeaderWrapper
-          ref={wrapper => (this.wrapper = ReactDOM.findDOMNode(wrapper))}
-          isHome={this.props.location.pathname === "/"}
-        >
+        <HeaderWrapper>
           <HeaderContainer>
             <Link
               to="/"
@@ -67,22 +79,31 @@ export default class Header extends Component {
                 textDecoration: `none`,
               }}
             >
-              {/* <Img
+              <Img
                 fluid={logo}
                 style={{
-                  width: "100px",
-                  height: "100px",
+                  width: "150px",
+                  marginLeft: "1rem",
                 }}
-              />{" "} */}
-              <h1>{siteTitle}</h1>
+              />{" "}
             </Link>
             <MainNav>
               <ul>
+                <li className="buyButton">
+                  <Link to="/buy">Buy</Link>
+                </li>
                 <li>
                   <Link to="/">Home</Link>
                 </li>
+
+                <li>
+                  <Link to="/posts">Blog</Link>
+                </li>
                 <li>
                   <Link to="/about">About</Link>
+                </li>
+                <li>
+                  <Link to="/contact">Contact</Link>
                 </li>
               </ul>
             </MainNav>
@@ -96,19 +117,11 @@ export default class Header extends Component {
               top: 0,
               width: "100%",
               height: "100%",
-              opacity: 0.5,
+              opacity: 0.25,
             }}
           />
         </HeaderWrapper>
       </header>
     )
   }
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }

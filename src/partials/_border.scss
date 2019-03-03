@@ -1,0 +1,19 @@
+@mixin solid-border($size, $color) {
+  border: $size solid $color;
+}
+
+@mixin ridge-border($size, $color) {
+  border: $size ridge $color;
+}
+
+@mixin groove-border($size, $color) {
+  border: $size groove $color;
+}
+
+@mixin double-border($size, $color) {
+  border: $size double $color;
+}
+
+@mixin dotted-border($size, $color) {
+  border: $size dotted $color;
+}

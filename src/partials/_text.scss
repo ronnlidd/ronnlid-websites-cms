@@ -1,0 +1,56 @@
+@import "size";
+@import "color";
+
+@mixin stdh1 {
+  text-align: center;
+  width: 60%;
+  margin: 1vw auto;
+  color: $netflix-black;
+  padding: 1rem;
+  border-radius: 1%;
+  font-size: 5vw;
+
+  @media screen and (max-width: 750px) {
+    font-size: 8vw;
+  }
+}
+
+// @mixin text(
+//   $multiply: 1,
+//   $text-align: center,
+//   $color: $netflix-black,
+//   $font-weight: 200,
+//   $text-decoration: none,
+//   $BG: none,
+//   $text-transform: none
+// ) {
+//   @media (max-width: $sm-mq-max) {
+//     font-size: $sm-rem * #{$multiply};
+//     text-align: #{$text-align};
+//     font-weight: #{font-weight};
+//     color: #{$color};
+//     text-decoration: #{$text-decoration};
+//     background: #{$BG};
+//     text-transform: #{$text-transform};
+//   }
+
+//   @media (min-width: $md-mq-min) {
+//     font-size: $md-rem * #{$multiply};
+//     text-align: $text-align;
+//     color: #{$color};
+//     text-decoration: #{$text-decoration};
+//     background: #{$BG};
+//     font-weight: #{font-weight};
+//     text-transform: #{$text-transform};
+//   }
+
+//   @media (min-width: $lg-mq-min) {
+//     font-size: $lg-rem * #{$multiply};
+//     text-align: $text-align;
+//     color: #{$color};
+//     text-decoration: #{$text-decoration};
+//     background: #{$BG};
+//     font-weight: #{font-weight};
+//     text-transform: #{$text-transform};
+//   }
+// }

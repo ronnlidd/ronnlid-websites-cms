@@ -7,7 +7,6 @@ const PostListing = ({ post }) => (
       <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
     </h3>
     <span>{post.frontmatter.date}</span>
-
     <p>{post.excerpt}</p>
   </article>
 )
