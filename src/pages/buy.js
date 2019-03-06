@@ -10,6 +10,7 @@ import {
   FlexRow,
 } from "../components/styledComponents"
 import Package from "../components/package"
+import ScndFancyButton from "../components/thirdFancyButton"
 
 export default class Buy extends Component {
   render() {
@@ -20,11 +21,11 @@ export default class Buy extends Component {
         <h1 className="buyTitle">Buy</h1>
         <Img fluid={data.file.childImageSharp.fluid} className="handshake" />
         <h2>Method 1: Email your requirements</h2>
-        <a href="mailto:david@ronnlidwebsites.com">
-          <BasicButton>
-            Click here to send me an email from your software of choice
-          </BasicButton>
-        </a>
+        <ScndFancyButton
+          text="Click here to send me an email from your software of choice"
+          firstOrSecond={true}
+          linkTo="mailto:david@ronnlidwebsites.com"
+        />
         <br />
         <br />
 
