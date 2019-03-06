@@ -9,7 +9,6 @@ const Posts = ({ data, location }) => (
   <Layout location={location}>
     <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
     <h1>Blog Posts</h1>
-
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <PostListing key={node.id} post={node} />
     ))}

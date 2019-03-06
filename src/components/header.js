@@ -135,15 +135,7 @@ export default class Header extends Component {
           />
         </Helmet>
         <HeaderContainer>
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            <Img fluid={logo} className="ronnlidWebsitesLogo" />{" "}
-          </Link>
+          <Img fluid={logo} className="ronnlidWebsitesLogo" />
           <Toggle>
             {({ on, toggle }) => (
               <>

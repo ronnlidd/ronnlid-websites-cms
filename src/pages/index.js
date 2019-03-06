@@ -14,6 +14,7 @@ const AboutDavid = styled.div`
   border: 1px solid black;
   padding: 2rem;
   border-radius: 1rem;
+  box-shadow: 0 3px 3px black;
 
   @media screen and (max-width: 1000px) {
     display: block;

@@ -4,6 +4,10 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import PageProgress from "react-page-progress"
 import styled from "styled-components"
+import { Link } from "gatsby"
+import FancyButton from "../components/FancyButton"
+import { BasicButton } from "../components/styledComponents"
+import "../styles/fancyButton.css"
 
 const PageProgressContainer = styled.div`
   position: absolute;
@@ -21,7 +25,16 @@ export class PostPage extends Component {
         <PageProgressContainer>
           <PageProgress />
         </PageProgressContainer>
-        <Link>Go back to Blog Posts</Link>
+        <Link to="/posts">
+          <FancyButton>
+            Go back to <i>Blog Posts</i>
+          </FancyButton>
+        </Link>
+        <BasicButton className="mediaQueryBasicButtonMobile">
+          <Link to="/posts">
+            Go back to <i>Blog Posts</i>
+          </Link>
+        </BasicButton>
         <h1>{data.markdownRemark.frontmatter.title}</h1>
         <span>{data.markdownRemark.frontmatter.date}</span>
         <div
