@@ -24,6 +24,7 @@ const Contact = ({ data, location }) => (
       name="contact"
       method="POST"
       data-netlify="true"
+      netlify-honeypot="bot-field"
       action="/contact-success/"
     >
       <p>
@@ -33,13 +34,19 @@ const Contact = ({ data, location }) => (
             type="text"
             name="name"
             placeholder=" First Name & Last Name"
+            required
           />
         </label>
       </p>
       <p>
         <label>
           Your Email:{" "}
-          <input type="email" name="email" placeholder=" Email Address" />
+          <input
+            type="email"
+            name="email"
+            placeholder=" Email Address"
+            required
+          />
         </label>
       </p>
       <p>
@@ -48,6 +55,7 @@ const Contact = ({ data, location }) => (
         <textarea
           name="message"
           placeholder="Write your question or input here."
+          required
         />
       </p>
       <p>

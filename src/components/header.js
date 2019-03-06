@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import Helmet from "react-helmet"
 import Toggle from "../components/toggle"
 
-const HeaderWrapper = styled.div`
+const HeaderWrapper = styled.header`
   background: linear-gradient(-130deg, black, #f7f7f7, #221f1f);
   margin-bottom: 1.45rem;
   overflow: hidden;
@@ -20,12 +20,17 @@ const HeaderWrapper = styled.div`
   }
 
   @media screen and (min-width: 1000px) {
-    width: 22vw;
-    float: right;
+    margin: 0 auto;
     padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    .background {
+      display: none;
+    }
 
     & .ronnlidWebsitesLogo {
-      width: 20vw;
+      width: 24vw;
       margin: 0 auto;
     }
   }
@@ -120,7 +125,7 @@ export default class Header extends Component {
     const { background, logo } = this.props
 
     return (
-      <header>
+      <HeaderWrapper>
         <Helmet>
           <link
             rel="stylesheet"
@@ -129,75 +134,74 @@ export default class Header extends Component {
             crossorigin="anonymous"
           />
         </Helmet>
-        <HeaderWrapper>
-          <HeaderContainer>
-            <Link
-              to="/"
-              style={{
-                color: `white`,
-                textDecoration: `none`,
-              }}
-            >
-              <Img fluid={logo} className="ronnlidWebsitesLogo" />{" "}
-            </Link>
-            <Toggle>
-              {({ on, toggle }) => (
-                <>
-                  {on ? (
-                    <MainNav>
-                      <ul className="slideInMenu">
-                        <li onClick={toggle}>
-                          <i className="fas fa-lock-open" />
-                        </li>
-                        <li className="buyButton">
-                          <Link to="/buy">
-                            <i className="fas fa-shopping-cart" /> Buy
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/">
-                            <i className="fas fa-home" /> Home
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/posts">
-                            <i className="fas fa-blog" /> Blog
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/contact">
-                            <i className="fas fa-envelope" /> Contact
-                          </Link>
-                        </li>
-                      </ul>
-                    </MainNav>
-                  ) : (
-                    <MainNav>
-                      <ul>
-                        <li onClick={toggle}>
-                          <i className="fas fa-lock" />
-                        </li>
-                      </ul>
-                    </MainNav>
-                  )}
-                </>
-              )}
-            </Toggle>
-          </HeaderContainer>
-
-          <Img
-            fluid={background}
+        <HeaderContainer>
+          <Link
+            to="/"
             style={{
-              position: "absolute",
-              left: 0,
-              top: 0,
-              width: "100%",
-              height: "100%",
-              opacity: 0.25,
+              color: `white`,
+              textDecoration: `none`,
             }}
-          />
-        </HeaderWrapper>
-      </header>
+          >
+            <Img fluid={logo} className="ronnlidWebsitesLogo" />{" "}
+          </Link>
+          <Toggle>
+            {({ on, toggle }) => (
+              <>
+                {on ? (
+                  <MainNav>
+                    <ul className="slideInMenu">
+                      <li onClick={toggle}>
+                        <i className="fas fa-lock-open" />
+                      </li>
+                      <li className="buyButton">
+                        <Link to="/buy">
+                          <i className="fas fa-shopping-cart" /> Buy
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/">
+                          <i className="fas fa-home" /> Home
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/posts">
+                          <i className="fas fa-blog" /> Blog
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/contact">
+                          <i className="fas fa-envelope" /> Contact
+                        </Link>
+                      </li>
+                    </ul>
+                  </MainNav>
+                ) : (
+                  <MainNav>
+                    <ul>
+                      <li onClick={toggle}>
+                        <i className="fas fa-lock" />
+                      </li>
+                    </ul>
+                  </MainNav>
+                )}
+              </>
+            )}
+          </Toggle>
+        </HeaderContainer>
+
+        <Img
+          fluid={background}
+          className="background"
+          style={{
+            position: "absolute",
+            left: 0,
+            top: 0,
+            width: "100%",
+            height: "100%",
+            opacity: 0.25,
+          }}
+        />
+      </HeaderWrapper>
     )
   }
 }

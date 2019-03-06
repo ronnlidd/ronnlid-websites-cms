@@ -5,7 +5,7 @@ export default class ValueProposition extends React.Component {
   render() {
     return (
       <div className="valueProposition" id="value-proposition">
-        <h1 className="valuePropositionTitle">Value proposition</h1>
+        <h1 style={{ marginTop: "10px" }}>Value proposition</h1>
         <h2 className="slogan">
           <em>Experience is the ultimate source of value</em>
         </h2>

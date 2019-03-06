@@ -3,6 +3,7 @@ import "../styles/footer.css"
 import Helmet from "react-helmet"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import NewsletterSignup from "../components/newsletterSignup"
 
 const RonnlidWebsitesCopyright = styled.div`
   display: flex;
@@ -89,6 +90,7 @@ export default class Footer extends React.Component {
             &copy;{this.state.year}, Ronnlid Websites, David Rönnlid
           </p>
         </RonnlidWebsitesCopyright>
+        <NewsletterSignup />
       </footer>
     )
   }

@@ -15,19 +15,10 @@ export default class Buy extends Component {
   render() {
     const { location, data } = this.props
     return (
-      <Layout
-        location={location}
-        besidesHeader={
-          <>
-            <h1 className="buyTitle">Buy</h1>
-            <Img
-              fluid={data.file.childImageSharp.fluid}
-              className="handshake"
-            />
-          </>
-        }
-      >
+      <Layout location={location}>
         <SEO title="Buy" keywords={[`gatsby`, `application`, `react`]} />
+        <h1 className="buyTitle">Buy</h1>
+        <Img fluid={data.file.childImageSharp.fluid} className="handshake" />
         <h2>Method 1: Email your requirements</h2>
         <a href="mailto:david@ronnlidwebsites.com">
           <BasicButton>
@@ -42,6 +33,7 @@ export default class Buy extends Component {
           name="contact"
           method="POST"
           data-netlify="true"
+          netlify-honeypot="bot-field"
           action="/contact-success/"
         >
           <p>
@@ -57,7 +49,12 @@ export default class Buy extends Component {
           <p>
             <label>
               Your Email:{" "}
-              <input type="email" name="email" placeholder=" Email Address" />
+              <input
+                type="email"
+                name="email"
+                placeholder=" Email Address"
+                required
+              />
             </label>
           </p>
           <p>
@@ -65,6 +62,7 @@ export default class Buy extends Component {
             Message:{" "}
             <textarea
               name="message"
+              required
               placeholder="Let me know what you want your website to do for you/your company & if you have any specific requirements for design."
             />
           </p>

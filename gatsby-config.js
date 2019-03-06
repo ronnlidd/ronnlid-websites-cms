@@ -3,7 +3,6 @@ module.exports = {
     title: `Ronnlid Websites`,
     description: "Experience is the ultimate source of value",
     author: `David Rönnlid`,
-    siteUrl: "https://ronnlidwebsites.netlify.com/",
   },
   plugins: [
     `gatsby-plugin-styled-components`,

@@ -2,6 +2,15 @@ import React, { Component } from "react"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
+import PageProgress from "react-page-progress"
+import styled from "styled-components"
+
+const PageProgressContainer = styled.div`
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+`
 
 export class PostPage extends Component {
   render() {
@@ -9,7 +18,10 @@ export class PostPage extends Component {
     return (
       <Layout location={location}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <h1>Post page</h1>
+        <PageProgressContainer>
+          <PageProgress />
+        </PageProgressContainer>
+        <Link>Go back to Blog Posts</Link>
         <h1>{data.markdownRemark.frontmatter.title}</h1>
         <span>{data.markdownRemark.frontmatter.date}</span>
         <div

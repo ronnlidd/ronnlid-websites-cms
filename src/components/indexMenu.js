@@ -3,36 +3,29 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const IndexPageMenu = styled.ul`
-position absolute;
-top: 6vw;
-right 28vw;
-list-style: none;
-color: white;
-padding: 1rem;
-border: 1px solid blue;
-border-radius: 1rem;
-box-shadow: 0 3px 3px black;
-& li {
+  list-style: none;
+
+  & li {
     & a {
-        color: black;
-        margin: 23px;
-        text-decoration: none;
-        font-family: sans-serif;
-        border-bottom: 3px solid blue;
+      color: black;
+      margin: 23px;
+      text-decoration: none;
+      font-family: sans-serif;
+      border-bottom: 3px solid blue;
     }
 
     & :hover {
-        & a {
-            border-bottom: none;
-        }
+      & a {
+        border-bottom: none;
+      }
     }
-}
+  }
 
-@media screen and (max-width:999px) {
+  @media screen and (max-width: 999px) {
     position: static;
     li {
     }
-}
+  }
 `
 
 export class IndexMenu extends Component {

@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { BasicButton } from "./styledComponents"
-import Checkout from "./checkout"
 
 const PackageWrapper = styled.div`
   border: 1px solid black;
@@ -37,7 +36,6 @@ export class Package extends Component {
           ))}
         </ul>
         <BasicButton>Buy</BasicButton>
-        {/* <Checkout /> */}
       </PackageWrapper>
     )
   }
