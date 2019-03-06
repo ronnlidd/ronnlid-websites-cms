@@ -1,0 +1,140 @@
+@import "../partials/color";
+@import "../partials/size";
+@import "../partials/box";
+@import "../partials/border";
+@import "../partials/box-shadow";
+@import "../partials/text";
+
+.valueProposition {
+  & .valuePropositionTitle {
+    @include stdh1;
+  }
+
+  & .slogan {
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
+    color: lighten($netflix-red, 10%);
+    font-size: 3.8vw;
+    padding: 2vw;
+    background: $netflix-black;
+    border-bottom: 0.5rem ridge $gold;
+    @include BS-slight-down;
+  }
+
+  & .card {
+    @include ridge-border(0.5 * $sm-rem, $gold);
+    border-radius: 5%;
+    @include BS-slight-down;
+    background: $netflix-white;
+    margin: 2vw auto 7vw auto;
+    padding: 1vw 4vw;
+    width: 100%;
+
+    & h2 {
+      text-align: center;
+      margin-top: 3vw;
+      font-size: 6vw;
+      padding: 0.5vw;
+      background: $netflix-red;
+      color: $netflix-white;
+      @include solid-border(2px, $netflix-black);
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+      @include BS-slight-down;
+      font-weight: 400;
+    }
+
+    & h4 {
+      font-size: 0.8rem;
+      font-weight: 400;
+      margin: 0 auto;
+
+      & strong {
+        font-size: 1.25rem;
+      }
+    }
+    & ul {
+      list-style: none;
+      padding: 0 1vw;
+      @include groove-border(0.25rem, $netflix-red);
+      @include BS-slight-down;
+      background: $netflix-black;
+      color: $netflix-white;
+      margin: 1rem auto;
+      & li {
+        font-size: 1rem;
+        border: 1px solid $google-blue;
+        padding: 1rem 0.4rem;
+        border-right: 0;
+        border-left: 0;
+        font-weight: 200;
+
+        & a {
+          color: lighten($google-blue, 25%);
+
+          &:hover {
+            color: $google-blue;
+          }
+        }
+
+        & .fa-check-square {
+          color: $google-green;
+        }
+
+        & .fa-arrow-right {
+          display: none;
+        }
+      }
+
+      & .firstLi {
+        border-top: none;
+      }
+
+      & .lastLi {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .valuePropositionCards {
+    display: flex;
+    flex-direction: row;
+    margin-top: $sm-rem;
+
+    & .card {
+      margin: 1vw;
+      border-radius: 0;
+      padding: 0.5vw 2vw;
+      background: $netflix-white;
+      color: $netflix-black;
+
+      & h2 {
+        width: 100%;
+        font-size: 2.55vw;
+        margin-top: 1vw;
+        padding: 0.2vw;
+      }
+
+      & h4 {
+        font-size: 1.5vw;
+
+        & strong {
+          font-size: 1.92vw;
+        }
+      }
+      & ul {
+        & li {
+          font-size: 2vw;
+          line-height: 2.3vw;
+
+          & .fa-arrow-right {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}

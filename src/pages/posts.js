@@ -7,8 +7,8 @@ import PostListing from "../components/PostListing"
 
 const Posts = ({ data, location }) => (
   <Layout location={location}>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Posts</h1>
+    <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
+    <h1 style={{ position: "relative", top: "1rem" }}>Posts</h1>
 
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <PostListing key={node.id} post={node} />

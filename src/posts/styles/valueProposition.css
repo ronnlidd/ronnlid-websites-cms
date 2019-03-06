@@ -1,0 +1,96 @@
+.valueProposition .valuePropositionTitle {
+  color: #221f1f;
+  border-radius: 1%;
+  font-size: 5vw;
+  margin-top: 1rem; }
+  @media screen and (max-width: 750px) {
+    .valueProposition .valuePropositionTitle {
+      font-size: 1.5rem; } }
+.valueProposition .slogan {
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  color: #f72a35;
+  font-size: 3.8vw;
+  padding: 2vw;
+  background: #221f1f;
+  border-bottom: 0.5rem ridge #ffd900;
+  box-shadow: 0px 5px 17px -3px rgba(0, 0, 0, 0.75); }
+.valueProposition .card {
+  border: 0.5rem ridge #ffd900;
+  border-radius: 5%;
+  box-shadow: 0px 5px 17px -3px rgba(0, 0, 0, 0.75);
+  background: #f5f5f1;
+  margin: 2vw auto 7vw auto;
+  padding: 1vw 4vw;
+  width: 100%; }
+  .valueProposition .card h2 {
+    text-align: center;
+    margin-top: 3vw;
+    font-size: 6vw;
+    padding: 0.5vw;
+    background: #e50914;
+    color: #f5f5f1;
+    border: 2px solid #221f1f;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    box-shadow: 0px 5px 17px -3px rgba(0, 0, 0, 0.75);
+    font-weight: 400; }
+  .valueProposition .card h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 0 auto; }
+    .valueProposition .card h4 strong {
+      font-size: 1.25rem; }
+  .valueProposition .card ul {
+    list-style: none;
+    padding: 0 1vw;
+    border: 0.25rem groove #e50914;
+    box-shadow: 0px 5px 17px -3px rgba(0, 0, 0, 0.75);
+    background: #221f1f;
+    color: #f5f5f1;
+    margin: 1rem auto; }
+    .valueProposition .card ul li {
+      font-size: 1rem;
+      border: 1px solid #4285f4;
+      padding: 1rem 0.4rem;
+      border-right: 0;
+      border-left: 0;
+      font-weight: 200; }
+      .valueProposition .card ul li a {
+        color: #bad3fb; }
+        .valueProposition .card ul li a:hover {
+          color: #4285f4; }
+      .valueProposition .card ul li .fa-check-square {
+        color: #34a853; }
+      .valueProposition .card ul li .fa-arrow-right {
+        display: none; }
+    .valueProposition .card ul .firstLi {
+      border-top: none; }
+    .valueProposition .card ul .lastLi {
+      border-bottom: none; }
+
+@media screen and (min-width: 840px) {
+  .valuePropositionCards {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem; }
+    .valuePropositionCards .card {
+      margin: 1vw;
+      border-radius: 0;
+      padding: 0.5vw 2vw;
+      background: #f5f5f1;
+      color: #221f1f; }
+      .valuePropositionCards .card h2 {
+        width: 100%;
+        font-size: 2.55vw;
+        margin-top: 1vw;
+        padding: 0.2vw; }
+      .valuePropositionCards .card h4 {
+        font-size: 1.5vw; }
+        .valuePropositionCards .card h4 strong {
+          font-size: 1.92vw; }
+      .valuePropositionCards .card ul li {
+        font-size: 2vw;
+        line-height: 2.3vw; }
+        .valuePropositionCards .card ul li .fa-arrow-right {
+          display: inline; } }
