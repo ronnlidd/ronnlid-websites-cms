@@ -17,13 +17,13 @@ export class ScndFancyButton extends Component {
         </Helmet>
         {firstOrSecond ? (
           <div className="wrapper">
-            <a href={linkTo} className="fancy-button pop-onhover bg-gradient1">
+            <a href={linkTo} className="fancybutton pop-onhover bg-gradient1">
               <span>{text}</span>
             </a>
           </div>
         ) : (
           <div className="wrapper">
-            <a href={linkTo} className="fancy-button pop-onhover bg-gradient3">
+            <a href={linkTo} className="fancybutton pop-onhover bg-gradient3">
               <span>{text}</span>
             </a>
           </div>

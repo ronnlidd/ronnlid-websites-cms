@@ -19,13 +19,13 @@ export class ThirdFancyButton extends Component {
 
         {firstOrSecond ? (
           <div className="wrapper">
-            <a href={linkTo} className="fancy-button bg-gradient1">
+            <a href={linkTo} className="fancybutton bg-gradient1">
               <span>{text}</span>
             </a>
           </div>
         ) : (
           <div className="wrapper">
-            <a href={linkTo} className="fancy-button bg-gradient2">
+            <a href={linkTo} className="fancybutton bg-gradient2">
               <span>{text}</span>
             </a>
           </div>

@@ -27,12 +27,12 @@ export default class FAQ extends Component {
         <br />
 
         <Question question="Be honest with me. What are the potential issues with this approach?" />
-        <Answer answer="You may be looking for perfect accessibility, perfect cross-browser compatibility, perfect performance, etc. Well, it is impossible because their is not even a perfect way of doing things in many website-building instances, perfect is the enemy of the good. Instead, I will make sure you have great results. I will achieve this by basing my decisions on feedback I get from sub-systems of reality when building your website. An example: there is a problem with the home button in your navigation-bar, which I got as feedback from reality by clicking it without being redirected to the home page. From there I find the relevant component and dig deep into the code to find the bug, which I can then remove and integrate the wished for functionality of the website again. So with other words: yes, things can go wrong, but I'll fix them for you within agreed-upon time span." />
+        <Answer answer="You may be looking for perfect accessibility, perfect cross-browser compatibility, perfect performance, etc. Well, it is impossible because there is not even a perfect way of doing things in many website-building instances, perfect is the enemy of the good. Instead, I will make sure you have great results. I will achieve this by basing my decisions on feedback I get from sub-systems of reality when building your website. An example: there is a problem with the home button in your navigation-bar, which I got as feedback from reality by clicking it without being redirected to the home page. From there I find the relevant component and dig deep into the code to find the bug, which I can then remove and integrate the wished for functionality of the website again. So with other words: yes, things can go wrong, but I'll fix them for you within agreed-upon time span." />
 
         <Question question="How does this compare to the other options and competitors?" />
         <Answer
           className="lastAnswerWithoutBorderBottom"
-          answer="I started this company to sell this full-fledged package with all you want in a website because I saw that in many other packages of websites for entrepreneurs, their was a requirement for the entrepreneur doing loads of work & gathering coding/internet knowledge. I intend to prevent the cognitive load from creating a website to influence your ability to perform as an entrepreneur."
+          answer="I started this company to sell this full-fledged package with all you want in a website because I saw that in many other packages of websites for entrepreneurs, there was a requirement for the entrepreneur doing loads of work & gathering coding/internet knowledge. I intend to prevent the cognitive load from creating a website to influence your ability to perform as an entrepreneur."
         />
       </>
     )

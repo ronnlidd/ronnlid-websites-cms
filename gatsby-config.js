@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: `Ronnlid Websites`,
@@ -9,6 +11,15 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-source-stripe",
+      options: {
+        objects: ["Product", "Sku"],
+        secretKey: process.env.STRIPE_SECRET_KEY,
+        downloadFiles: true,
+      },
+    },
+    "gatsby-plugin-stripe",
     {
       resolve: `gatsby-source-filesystem`,
       options: {

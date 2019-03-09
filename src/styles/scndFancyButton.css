@@ -26,24 +26,21 @@
   margin: 5% auto;
   text-align: center;
   transform-style: preserve-3d;
-  perspective: 800px; }
-
-a {
-  text-decoration: none; }
-  a:hover, a:focus, a:active {
-    text-decoration: none; }
+  perspective: 800px;
+  overflow: hidden;
+  max-width: 100%; }
 
 /* fancy Button */
-.fancy-button {
+.fancybutton {
   display: inline-block;
   margin: 30px;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 17px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #000000;
   position: relative; }
-  .fancy-button:before {
+  .fancybutton:before {
     content: "";
     display: inline-block;
     height: 40px;
@@ -56,12 +53,12 @@ a {
     filter: blur(20px) brightness(0.95);
     transform-style: preserve-3d;
     transition: all 0.3s ease-out; }
-  .fancy-button i {
+  .fancybutton i {
     margin-top: -1px;
     margin-right: 20px;
     font-size: 1.265em;
     vertical-align: middle; }
-  .fancy-button span {
+  .fancybutton span {
     display: inline-block;
     padding: 18px 60px;
     border-radius: 50em;
@@ -70,30 +67,30 @@ a {
     will-change: transform, filter;
     transform-style: preserve-3d;
     transition: all 0.3s ease-out; }
-  .fancy-button:focus, .fancy-button:active {
+  .fancybutton:focus, .fancybutton:active {
     color: #ffffff; }
-  .fancy-button:hover {
+  .fancybutton:hover {
     color: #ffffff; }
-    .fancy-button:hover span {
+    .fancybutton:hover span {
       filter: brightness(1.05) contrast(1.05);
       transform: scale(0.95); }
-    .fancy-button:hover:before {
+    .fancybutton:hover:before {
       bottom: 0;
       filter: blur(10px) brightness(0.95); }
-  .fancy-button.pop-onhover:before {
+  .fancybutton.pop-onhover:before {
     opacity: 0;
     bottom: 10px; }
-  .fancy-button.pop-onhover:hover:before {
+  .fancybutton.pop-onhover:hover:before {
     bottom: -7px;
     opacity: 1;
     filter: blur(20px); }
-  .fancy-button.pop-onhover:hover span {
+  .fancybutton.pop-onhover:hover span {
     transform: scale(1.04); }
-  .fancy-button.pop-onhover:hover:active span {
+  .fancybutton.pop-onhover:hover:active span {
     filter: brightness(1) contrast(1);
     transform: scale(1);
     transition: all 0.15s ease-out; }
-  .fancy-button.pop-onhover:hover:active:before {
+  .fancybutton.pop-onhover:hover:active:before {
     bottom: 0;
     filter: blur(10px) brightness(0.95);
     transition: all 0.2s ease-out; }

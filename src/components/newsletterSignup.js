@@ -11,6 +11,7 @@ const NewsletterInput = styled.input`
   color: white;
   background: darkblue;
   margin-left: 3px;
+  margin-right: 10px;
   margin-top: 6px;
 `
 
@@ -41,7 +42,7 @@ export default class NewsletterSignup extends Component {
           style={{
             color: "black",
             fontWeight: "300",
-            width: "60vw",
+            width: "40vw",
             border: "1px solid white",
           }}
         >

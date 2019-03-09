@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { BasicButton } from "./styledComponents"
+import ThirdFancyButton from "./thirdFancyButton"
 
 const PackageWrapper = styled.div`
   border: 1px solid black;
@@ -31,11 +31,15 @@ export class Package extends Component {
         <p>{shortDescription}</p>
         <Img style={{ width: "100%", margin: "0 auto" }} fluid={imgSrc} />
         <ul>
-          {listItems.map(item => (
-            <li>{item}</li>
+          {listItems.map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ul>
-        <BasicButton>Buy</BasicButton>
+        <ThirdFancyButton
+          text="Buy"
+          firstOrSecond={true}
+          linkTo="https://ronnlidwebsites.com"
+        />
       </PackageWrapper>
     )
   }

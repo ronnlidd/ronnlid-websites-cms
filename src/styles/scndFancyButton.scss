@@ -41,26 +41,20 @@
   text-align: center;
   transform-style: preserve-3d;
   perspective: 800px;
-}
-a {
-  text-decoration: none;
-
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: none;
-  }
+  overflow: hidden;
+  max-width: 100%;
 }
 
 /* fancy Button */
-.fancy-button {
+.fancybutton {
+  // overflow: hidden;
   display: inline-block;
   margin: 30px;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 17px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #000000;
   position: relative;
 
   &:before {

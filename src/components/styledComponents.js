@@ -99,7 +99,7 @@ export const FlexRow = styled.div`
   margin: 0 auto;
   padding: 1rem;
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 1000px) {
     & div {
       width: 85vw;
     }
