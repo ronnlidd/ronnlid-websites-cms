@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 
 export class StripePlural extends Component {
   componentDidMount() {
-    this.stripe = window.Stripe("pk_test_SAdzfRokXPzl8ibgFddkYTlk", {
+    this.stripe = window.Stripe("pk_live_DAHl0TQHnufm4JldxTzeWaXJ", {
       betas: ["checkout_beta_4"],
     })
   }
@@ -40,7 +40,7 @@ export class StripePlural extends Component {
     return (
       <form onSubmit={this.handleSubmit(id)}>
         <h2>
-          {name} {formattedPrice}
+          {formattedPrice} for {name}
         </h2>
         <button type="submit">Buy now</button>
       </form>

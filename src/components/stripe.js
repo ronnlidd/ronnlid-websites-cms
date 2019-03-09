@@ -2,7 +2,7 @@ import React, { Component } from "react"
 
 class Stripe extends Component {
   componentDidMount() {
-    this.stripe = window.Stripe("pk_test_SAdzfRokXPzl8ibgFddkYTlk", {
+    this.stripe = window.Stripe("pk_live_DAHl0TQHnufm4JldxTzeWaXJ", {
       betas: ["checkout_beta_4"],
     })
   }
