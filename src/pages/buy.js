@@ -11,7 +11,7 @@ import {
 } from "../components/styledComponents"
 import Package from "../components/package"
 import ScndFancyButton from "../components/thirdFancyButton"
-import Stripe from "../components/stripe"
+import Skus from "../components/Skus"
 
 export default class Buy extends Component {
   render() {
@@ -28,6 +28,7 @@ export default class Buy extends Component {
           linkTo="mailto:david@ronnlidwebsites.com"
         />
         <br />
+        <Skus />
         <br />
 
         <h2>Method 2: Email your requirements</h2>
@@ -80,7 +81,7 @@ export default class Buy extends Component {
           </p>
         </NetlifyForm>
         <br />
-        <Stripe />
+        {/* <Stripe /> */}
 
         <br />
         <h2>Method 3: Choose a fixed cost package</h2>

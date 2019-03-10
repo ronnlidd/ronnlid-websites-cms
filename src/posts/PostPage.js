@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
-import PageProgress from "react-page-progress"
+// import PageProgress from "react-page-progress"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import FancyButton from "../components/FancyButton"
@@ -23,7 +23,8 @@ export class PostPage extends Component {
       <Layout location={location}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <PageProgressContainer>
-          <PageProgress />
+          {/* <PageProgress /> */}
+Hello
         </PageProgressContainer>
         <Link to="/posts">
           <FancyButton>

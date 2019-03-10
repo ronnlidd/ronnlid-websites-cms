@@ -4,7 +4,7 @@ title: This is the second post from Netlify CMS
 image: /img/happypeopletwo.jpg
 ---
 
-The Web Animations API opens the browser’s animation engine to developers and manipulation by JavaScript. This API was designed to underlie implementations of both CSS Animations and CSS Transitions, and leaves the door open to future animation effects. It is one of the most performant ways to animate on the Web where supported, letting the browser make its own internal optimizations without hacks, coercion, or Window.requestAnimationFrame().
+The Web Animations API opens the browser’s animation engine to developers and manipulation by JavaScript. This API was designed to underlie implementations of both CSS Animations and CSS Transitions, and leaves the door open to future animation effects. It is one of the most performant ways to animate on the Web where supported, letting the browser make its own internal optimizations without hacks, coercion,
 
 ![Ronnlid Websites Logo](https://raw.githubusercontent.com/ronnlidd/ronnlid-websites-cms/master/static/img/newlogov3.jpg "Ronnlid Websites Logo!")
 

@@ -10,6 +10,7 @@ export class StripePlural extends Component {
   }
 
   handleSubmit(sku) {
+    console.log(sku)
     return event => {
       event.preventDefault()
 
@@ -34,7 +35,7 @@ export class StripePlural extends Component {
     const priceFloat = (price / 100).toFixed(2)
     const formattedPrice = Intl.NumberFormat("en-US", {
       style: "currency",
-      currency,
+      currency: "USD",
     }).format(priceFloat)
 
     return (

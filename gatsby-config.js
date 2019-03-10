@@ -5,6 +5,7 @@ module.exports = {
     title: `Ronnlid Websites`,
     description: "Experience is the ultimate source of value",
     author: `David Rönnlid`,
+    siteUrl: "https://ronnlidwebsites.com",
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -19,7 +20,12 @@ module.exports = {
         downloadFiles: true,
       },
     },
-    "gatsby-plugin-stripe",
+    {
+      resolve: `gatsby-plugin-stripe`,
+      options: {
+        async: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
