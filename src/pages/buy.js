@@ -11,7 +11,6 @@ import {
 } from "../components/styledComponents"
 import Package from "../components/package"
 import ScndFancyButton from "../components/thirdFancyButton"
-import Skus from "../components/Skus"
 
 export default class Buy extends Component {
   render() {
@@ -28,7 +27,7 @@ export default class Buy extends Component {
           linkTo="mailto:david@ronnlidwebsites.com"
         />
         <br />
-        <Skus />
+
         <br />
 
         <h2>Method 2: Email your requirements</h2>
@@ -81,7 +80,6 @@ export default class Buy extends Component {
           </p>
         </NetlifyForm>
         <br />
-        {/* <Stripe /> */}
 
         <br />
         <h2>Method 3: Choose a fixed cost package</h2>
@@ -89,18 +87,21 @@ export default class Buy extends Component {
         <FlexRow id="fixedCostPackages">
           <Package
             name="basic"
+            productId="prod_EdyAZzPEgjt5qv"
             listItems={["h", "b", "c", "d", "e"]}
             imgSrc={data.packageOne.childImageSharp.fluid}
             shortDescription="This is the most basic of all packages. It is perfect for the local pizzeria or haridresser. Display basic content and images as well as social media links."
           />
           <Package
             name="startup"
+            productId="prod_Edy9zaJ26NdcLQ"
             listItems={["h", "b", "c", "d", "e"]}
             imgSrc={data.packageTwo.childImageSharp.fluid}
             shortDescription="Typical startup website with a couple of complex features, from which you can pick and choose a couple that best suit your needs."
           />
           <Package
             name="full-fledged"
+            productId="prod_Edxj3Luxu8mhHc"
             listItems={["h", "b", "c", "d", "e"]}
             imgSrc={data.packageThree.childImageSharp.fluid}
             shortDescription="Complex website with almost every feature a company can possibly need. Store integration, customer login, contact forms, etc."

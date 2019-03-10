@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import ThirdFancyButton from "./thirdFancyButton"
+import Skus from "./Skus"
 
 const PackageWrapper = styled.div`
   border: 1px solid black;
@@ -40,6 +41,7 @@ export class Package extends Component {
           firstOrSecond={true}
           linkTo="https://ronnlidwebsites.com"
         />
+        <Skus />
       </PackageWrapper>
     )
   }

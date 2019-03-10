@@ -58,7 +58,7 @@ const SkuCard = class extends React.Component {
           style={buttonStyles}
           onClick={event => this.redirectToCheckout(event, sku.id)}
         >
-          BUY ME
+          BUY ME!
         </button>
       </div>
     )
