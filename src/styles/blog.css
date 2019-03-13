@@ -1,0 +1,25 @@
+.blogPost,
+.postExcerpt {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: linear-gradient(to bottom right, #00ddff, rgba(221, 255, 0, 0.408));
+  border: 1px solid black;
+  box-shadow: 0 1px 1px black;
+  padding: 1rem;
+  border-radius: 1rem; }
+  .blogPost h1,
+  .blogPost div,
+  .blogPost p,
+  .blogPost span,
+  .postExcerpt h1,
+  .postExcerpt div,
+  .postExcerpt p,
+  .postExcerpt span {
+    color: black; }
+
+.mediaQueryBasicButtonMobile {
+  display: none; }
+
+@media screen and (max-width: 499.9px) {
+  .mediaQueryBasicButtonMobile {
+    display: block; } }

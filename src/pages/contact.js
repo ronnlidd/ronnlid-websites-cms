@@ -12,14 +12,14 @@ const Contact = ({ data, location }) => (
     <h1 className="pageTitle" style={{ position: "relative", top: "1rem" }}>
       Contact
     </h1>
-    You <i>can</i> send website inquiries here, <br />
-    but I recommend going to the{" "}
-    <Link to="/buy">
-      <i className="fas fa-shopping-cart" />
-    </Link>{" "}
-    if that's what you're looking for.
-    <br />
-    <br />
+    <p>
+      You <i>can</i> send website inquiries here, <br />
+      but I recommend going to the{" "}
+      <Link to="/buy">
+        <i className="fas fa-shopping-cart" />
+      </Link>{" "}
+      if that's what you're looking for.
+    </p>
     <NetlifyForm
       name="contact"
       method="POST"
@@ -69,6 +69,7 @@ const Contact = ({ data, location }) => (
         </BasicButton>
       </p>
     </NetlifyForm>
+    <br />
   </Layout>
 )
 

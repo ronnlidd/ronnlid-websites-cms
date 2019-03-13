@@ -2,19 +2,11 @@ import React, { Component } from "react"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
-// import PageProgress from "react-page-progress"
-import styled from "styled-components"
 import { Link } from "gatsby"
 import FancyButton from "../components/FancyButton"
 import { BasicButton } from "../components/styledComponents"
 import "../styles/fancyButton.css"
-
-const PageProgressContainer = styled.div`
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-`
+import "../styles/blog.css"
 
 export class PostPage extends Component {
   render() {
@@ -22,10 +14,6 @@ export class PostPage extends Component {
     return (
       <Layout location={location}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <PageProgressContainer>
-          {/* <PageProgress /> */}
-Hello
-        </PageProgressContainer>
         <Link to="/posts">
           <FancyButton>
             Go back to <i>Blog Posts</i>
@@ -36,13 +24,35 @@ Hello
             Go back to <i>Blog Posts</i>
           </Link>
         </BasicButton>
-        <h1>{data.markdownRemark.frontmatter.title}</h1>
-        <span>{data.markdownRemark.frontmatter.date}</span>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: data.markdownRemark.html,
-          }}
-        />
+        <br />
+
+        <div className="blogPost">
+          <h1>{data.markdownRemark.frontmatter.title}</h1>
+          <span>{data.markdownRemark.frontmatter.date}</span>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: data.markdownRemark.html,
+            }}
+          />
+        </div>
+        <br />
+        <Link to="/posts">
+          <FancyButton>
+            Go back to <i>Blog Posts</i>
+          </FancyButton>
+        </Link>
+        <BasicButton className="mediaQueryBasicButtonMobile">
+          <Link to="/posts">
+            Go back to <i>Blog Posts</i>
+          </Link>
+        </BasicButton>
+        <Link to="/">
+          <BasicButton>
+            Go to <i>Home</i>
+          </BasicButton>
+        </Link>
+        <br />
+        <br />
       </Layout>
     )
   }

@@ -31,7 +31,7 @@ export default class Footer extends React.Component {
     return (
       <footer>
         <button className="backToTop" onClick={this.handleClick}>
-          <h3>Back to top</h3>
+          BACK TO TOP
         </button>
         <Helmet>
           <link
@@ -87,7 +87,7 @@ export default class Footer extends React.Component {
             }}
           />
           <p className="copyRightP">
-            &copy;{this.state.year}, Ronnlid Websites, David Rönnlid
+            &copy; {this.state.year}, Ronnlid Websites, David Rönnlid
           </p>
         </RonnlidWebsitesCopyright>
         <NewsletterSignup />

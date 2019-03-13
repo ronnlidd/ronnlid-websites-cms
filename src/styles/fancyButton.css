@@ -56,13 +56,3 @@
     font-family: Futura, "Helvetica Neue", Helvetica, sans-serif;
   }
 }
-
-.mediaQueryBasicButtonMobile {
-  display: none;
-}
-
-@media screen and (max-width: 499.9px) {
-  .mediaQueryBasicButtonMobile {
-    display: block;
-  }
-}

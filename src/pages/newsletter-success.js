@@ -14,6 +14,7 @@ export default class NewsletterSuccess extends Component {
             You just filled in a form, the contents have been sent to David
             Rönnlid!
           </p>
+          <br />
         </div>
       </Layout>
     )

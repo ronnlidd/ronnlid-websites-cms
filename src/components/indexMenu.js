@@ -4,26 +4,37 @@ import { Link } from "gatsby"
 
 export const IndexPageMenu = styled.ul`
   list-style: none;
+  border: 1px solid black;
+  padding: 10px;
+  background: #f5f5f1;
+  border-radius: 10px;
+  margin: 1rem auto;
+
+  @media screen and (min-width: 1000px) {
+    float: left;
+    position: relative;
+    right: 40px;
+  }
+
+  & h2 {
+    color: black;
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5rem;
+  }
 
   & li {
     & a {
-      color: black;
       margin: 23px;
       text-decoration: none;
       font-family: sans-serif;
-      border-bottom: 3px solid blue;
-    }
+      padding: 3px;
+      transition: box-shadow 0.2s;
 
-    & :hover {
-      & a {
+      & :hover {
         border-bottom: none;
+        color: #252;
+        box-shadow: 2px 4px 2px black;
       }
-    }
-  }
-
-  @media screen and (max-width: 999px) {
-    position: static;
-    li {
     }
   }
 `
@@ -31,14 +42,12 @@ export const IndexPageMenu = styled.ul`
 export class IndexMenu extends Component {
   render() {
     return (
-      <IndexPageMenu>
+      <IndexPageMenu id="homeNav">
         <li>
           <h2
-            style={{
-              fontFamily: "serif",
-              color: "black",
-              borderBottom: ".4px solid black",
-            }}
+          // style={{
+          //   fontFamily: "serif",
+          // }}
           >
             Go to
           </h2>

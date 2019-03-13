@@ -1,0 +1,152 @@
+@import "../partials/color";
+@import "../partials/box-shadow";
+@import "../partials/border";
+
+.lightMode {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    #bf9 3px,
+    #cfc 9px,
+    #ffc 40vw
+  );
+
+  & h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: black;
+  }
+
+  & #homeNav {
+    background: $netflix-black;
+    border: 1px solid white;
+
+    & h2 {
+      color: $netflix-white;
+      border-bottom: 1px solid white;
+    }
+    & li {
+      & a {
+        color: white;
+      }
+    }
+  }
+
+  & .aboutDavid {
+    background: $netflix-black;
+
+    & h2 {
+      color: $netflix-black;
+      background: white;
+    }
+
+    & p {
+      color: $netflix-white;
+    }
+  }
+
+  & .card {
+    background: $netflix-black;
+
+    & h2 {
+      background: $netflix-red;
+      color: $netflix-white;
+      border: 2px solid $netflix-black;
+
+      @include BS-slight-down;
+    }
+
+    & h4 {
+      color: white;
+
+      & ul {
+        @include groove-border(0.25rem, $netflix-red);
+        background: $netflix-black;
+        color: $netflix-white;
+        & li {
+          border: 1px solid $google-blue;
+
+          & a {
+            color: lighten($google-blue, 25%);
+
+            &:hover {
+              color: $google-blue;
+            }
+          }
+
+          & .fa-check-square {
+            color: $google-green;
+          }
+        }
+      }
+    }
+  }
+  & .faq {
+    & h4 {
+      background: $netflix-black;
+      color: $netflix-white;
+    }
+    & p {
+      background: $google-blue;
+      color: $netflix-white;
+    }
+    padding-bottom: 2rem;
+  }
+
+  & .techStack {
+    & .technologyComponent {
+      background: black;
+      box-shadow: 0px 2px 2px black;
+      & h1,
+      p {
+        color: $netflix-white;
+      }
+
+      & a {
+        color: #f5f;
+      }
+    }
+  }
+
+  & .packageWrapper {
+    background: $netflix-black;
+
+    & h3 {
+      padding: 1rem;
+      background: $google-blue;
+      box-shadow: 0 2px 2px $netflix-black;
+      border: 2px ridge $netflix-white;
+    }
+
+    & .textColor {
+      color: white;
+    }
+
+    & .liColor {
+      color: black;
+    }
+  }
+
+  & .blogPost,
+  .postExcerpt {
+    background: linear-gradient(
+      to bottom right,
+      rgb(255, 70, 70),
+      rgb(0, 0, 0)
+    );
+    border: 1px solid black;
+    box-shadow: 0 1px 1px $netflix-black;
+    padding: 1rem;
+    border-radius: 1rem;
+    & h1,
+    div,
+    p,
+    span {
+      color: $netflix-white;
+    }
+  }
+}

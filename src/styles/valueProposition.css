@@ -38,7 +38,8 @@
   .valueProposition .card h4 {
     font-size: 0.8rem;
     font-weight: 400;
-    margin: 0 auto; }
+    margin: 0 auto;
+    color: black; }
     .valueProposition .card h4 strong {
       font-size: 1.25rem; }
   .valueProposition .card ul {

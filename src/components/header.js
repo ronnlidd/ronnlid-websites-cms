@@ -118,6 +118,27 @@ ul {
       }
     }
   }
+
+  @media screen and (max-width: 450px) {
+    & ul {
+      max-height: 3rem;
+      & li {
+        visibility: hidden;
+        & span { display: none;
+        }
+          & i {
+          visibility: visible;
+          padding-bottom: .5rem;
+          border-bottom: 1px solid gold;
+          margin: 0 -.3rem;
+
+          & :hover {
+            border-bottom: 1px solid black;    
+          }
+        }
+      }
+    } 
+  }
 `
 
 export default class Header extends Component {
@@ -143,26 +164,33 @@ export default class Header extends Component {
                   <MainNav>
                     <ul className="slideInMenu">
                       <li onClick={toggle}>
-                        <i className="fas fa-lock-open" />
+                        <i
+                          title="Toggle to close"
+                          className="fas fa-lock-open"
+                        />
                       </li>
                       <li className="buyButton">
                         <Link to="/buy">
-                          <i className="fas fa-shopping-cart" /> Buy
+                          <i title="Buy" className="fas fa-shopping-cart" />{" "}
+                          <span>Buy</span>
                         </Link>
                       </li>
                       <li>
                         <Link to="/">
-                          <i className="fas fa-home" /> Home
+                          <i title="Home" className="fas fa-home" />{" "}
+                          <span>Home</span>
                         </Link>
                       </li>
                       <li>
                         <Link to="/posts">
-                          <i className="fas fa-blog" /> Blog
+                          <i title="Blog" className="fas fa-blog" />{" "}
+                          <span>Blog</span>
                         </Link>
                       </li>
                       <li>
                         <Link to="/contact">
-                          <i className="fas fa-envelope" /> Contact
+                          <i title="Contact" className="fas fa-envelope" />{" "}
+                          <span>Contact</span>
                         </Link>
                       </li>
                     </ul>
@@ -171,7 +199,7 @@ export default class Header extends Component {
                   <MainNav>
                     <ul>
                       <li onClick={toggle}>
-                        <i className="fas fa-lock" />
+                        <i title="Toggle to open" className="fas fa-lock" />
                       </li>
                     </ul>
                   </MainNav>

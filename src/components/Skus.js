@@ -2,14 +2,6 @@ import React, { Component } from "react"
 import { graphql, StaticQuery } from "gatsby"
 import SkuCard from "./SkuCard"
 
-const conatinerStyles = {
-  display: "flex",
-  flexDirection: "row",
-  flexWrap: "wrap",
-  justifyContent: "space-between",
-  padding: "1rem 0 1rem 0",
-}
-
 class Skus extends Component {
   state = {
     stripe: null,
@@ -24,6 +16,9 @@ class Skus extends Component {
   }
 
   render() {
+    const { stripe } = this.state
+    const { description, imgSrc, listItems } = this.props
+
     return (
       <StaticQuery
         query={graphql`
@@ -46,11 +41,18 @@ class Skus extends Component {
           }
         `}
         render={({ skus }) => (
-          <div style={conatinerStyles}>
-            {skus.edges.map(({ node: sku }) => (
-              <SkuCard key={sku.id} sku={sku} stripe={this.state.stripe} />
+          <>
+            {skus.edges.map(({ node: sku }, idx) => (
+              <SkuCard
+                key={sku.id}
+                sku={sku}
+                stripe={stripe}
+                description={description[idx]}
+                imgSrc={imgSrc[idx]}
+                listItems={listItems[idx]}
+              />
             ))}
-          </div>
+          </>
         )}
       />
     )

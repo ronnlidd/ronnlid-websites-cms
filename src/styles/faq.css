@@ -1,0 +1,10 @@
+.faq p {
+  padding-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
+  padding: 10px;
+  margin-top: -0.2rem;
+  border-radius: 10px;
+  font-weight: 500; }
+.faq h4 {
+  padding: 10px;
+  border-radius: 10px; }

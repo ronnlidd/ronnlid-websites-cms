@@ -4,14 +4,17 @@
   width: 100%;
   justify-content: center; }
   .techStack .technologyComponent {
+    background: #f5f5f1;
     width: 25vw;
     padding: 10px;
     margin: 10px;
     border: 1px solid black;
     border-radius: 10% 0; }
     .techStack .technologyComponent p {
-      font-size: 1rem; }
+      font-size: 1rem;
+      color: #221f1f; }
     .techStack .technologyComponent h1 {
+      color: #221f1f;
       font-size: 2rem; }
     .techStack .technologyComponent .technologyImg {
       height: 40px; }
@@ -24,9 +27,9 @@
     justify-content: center; }
     .techStack .technologyComponent {
       width: 90vw;
-      padding: 10px;
+      padding: 15px;
       margin: 10px;
-      border: 1px solid black;
+      border: 1px solid #d0bebe;
       border-radius: 10% 0; }
       .techStack .technologyComponent p {
         font-size: 1rem; }

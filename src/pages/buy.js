@@ -9,8 +9,8 @@ import {
   NetlifyForm,
   FlexRow,
 } from "../components/styledComponents"
-import Package from "../components/package"
-import ScndFancyButton from "../components/thirdFancyButton"
+import Skus from "../components/Skus"
+import ScndFancyButton from "../components/scndFancyButton"
 
 export default class Buy extends Component {
   render() {
@@ -23,13 +23,11 @@ export default class Buy extends Component {
         <h2>Method 1: Email your requirements</h2>
         <ScndFancyButton
           text="Click here to send me an email from your software of choice"
-          firstOrSecond={true}
+          firstOrSecond={false}
           linkTo="mailto:david@ronnlidwebsites.com"
         />
         <br />
-
         <br />
-
         <h2>Method 2: Email your requirements</h2>
         <NetlifyForm
           name="contact"
@@ -80,33 +78,56 @@ export default class Buy extends Component {
           </p>
         </NetlifyForm>
         <br />
-
         <br />
         <h2>Method 3: Choose a fixed cost package</h2>
-
+        <h4>Make sure to use an email you can use in the checkout.</h4>
         <FlexRow id="fixedCostPackages">
-          <Package
-            name="basic"
-            productId="prod_EdyAZzPEgjt5qv"
-            listItems={["h", "b", "c", "d", "e"]}
-            imgSrc={data.packageOne.childImageSharp.fluid}
-            shortDescription="This is the most basic of all packages. It is perfect for the local pizzeria or haridresser. Display basic content and images as well as social media links."
-          />
-          <Package
-            name="startup"
-            productId="prod_Edy9zaJ26NdcLQ"
-            listItems={["h", "b", "c", "d", "e"]}
-            imgSrc={data.packageTwo.childImageSharp.fluid}
-            shortDescription="Typical startup website with a couple of complex features, from which you can pick and choose a couple that best suit your needs."
-          />
-          <Package
-            name="full-fledged"
-            productId="prod_Edxj3Luxu8mhHc"
-            listItems={["h", "b", "c", "d", "e"]}
-            imgSrc={data.packageThree.childImageSharp.fluid}
-            shortDescription="Complex website with almost every feature a company can possibly need. Store integration, customer login, contact forms, etc."
+          <Skus
+            description={[
+              "This is the most basic of all packages. It is perfect for the local pizzeria or hairdresser. Display basic content, images and social media links.",
+              "Typical startup website with a couple of complex features, from which you can pick and choose a couple that best suit your needs.",
+              "Complex website with a great deal of features that make the UX (User Experience) splendid. Store integration, customer login, contact forms, etc.)",
+            ]}
+            imgSrc={[
+              data.packageOne.childImageSharp.fluid,
+              data.packageTwo.childImageSharp.fluid,
+              data.packageThree.childImageSharp.fluid,
+            ]}
+            listItems={[
+              [
+                "Your custom information displayed",
+                "Web development best practices generally followed. (Responsive, mobile-first, image lazy loading, PWA, etc.)",
+                "Custom design",
+                "Hosting configured",
+                "Your domain name of choice",
+                "Max 3 pages",
+              ],
+              [
+                "Your custom information displayed",
+                "Web development best practices generally followed. (Responsive, mobile-first, image lazy loading, PWA, etc.)",
+                "Custom design",
+                "Hosting configured",
+                "Your domain name of choice",
+                "Max 1 product store OR blog with easy-to-use interface for writer",
+                "Contact OR newsletter form to gather info from website visitors",
+                "Max 10 pages",
+              ],
+              [
+                "Your custom information displayed",
+                "Web development best practices generally followed. (Responsive, mobile-first, image lazy loading, PWA, etc.)",
+                "Custom design",
+                "Hosting configured",
+                "Your domain name of choice",
+                "Blog with easy-to-use interface for writer",
+                "Contact form and newsletter form to gather info from website visitors + Max 3 additional forms",
+                "Max 10 products store",
+                "Max 40 pages",
+              ],
+            ]}
           />
         </FlexRow>
+        <br />
+        <br />
       </Layout>
     )
   }

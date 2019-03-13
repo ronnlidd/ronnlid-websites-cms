@@ -1,4 +1,5 @@
-/* Mixins */
+@import "../partials/color";
+
 @mixin gradientBg($startColor, $endColor) {
   background: $startColor;
   background: -moz-linear-gradient(
@@ -37,7 +38,7 @@
 
 /* General */
 .wrapper {
-  margin: 5% auto;
+  margin: 0 auto;
   text-align: center;
   transform-style: preserve-3d;
   perspective: 800px;
@@ -56,21 +57,6 @@
   text-transform: uppercase;
   color: #000000;
   position: relative;
-
-  &:before {
-    content: "";
-    display: inline-block;
-    height: 40px;
-    position: absolute;
-    bottom: -5px;
-    left: 30px;
-    right: 30px;
-    z-index: -1;
-    border-radius: 30em;
-    filter: blur(20px) brightness(0.95);
-    transform-style: preserve-3d;
-    transition: all 0.3s ease-out;
-  }
   i {
     margin-top: -1px;
     margin-right: 20px;
@@ -92,7 +78,7 @@
     color: #ffffff;
   }
   &:hover {
-    color: #ffffff;
+    color: $netflix-white;
 
     span {
       filter: brightness(1.05) contrast(1.05);

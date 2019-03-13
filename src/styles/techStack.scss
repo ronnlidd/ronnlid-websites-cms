@@ -1,3 +1,5 @@
+@import "../partials/color";
+
 .techStack {
   display: flex;
   flex-flow: row wrap;
@@ -5,6 +7,7 @@
   justify-content: center;
 
   & .technologyComponent {
+    background: $netflix-white;
     width: 25vw;
     padding: 10px;
     margin: 10px;
@@ -13,9 +16,11 @@
 
     & p {
       font-size: 1rem;
+      color: $netflix-black;
     }
 
     & h1 {
+      color: $netflix-black;
       font-size: 2rem;
     }
 
@@ -34,9 +39,9 @@
 
     & .technologyComponent {
       width: 90vw;
-      padding: 10px;
+      padding: 15px;
       margin: 10px;
-      border: 1px solid black;
+      border: 1px solid rgb(208, 190, 190);
       border-radius: 10% 0;
 
       & p {

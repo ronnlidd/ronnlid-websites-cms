@@ -5,7 +5,8 @@
 
 .buyTitle {
   position: relative;
-  top: 1rem; }
+  top: 1rem;
+  color: white; }
 
 @media (min-width: 1000px) {
   .handshake {

@@ -8,24 +8,25 @@ footer {
   display: block;
   z-index: 2;
   padding-bottom: 1rem;
-  margin-top: 2.5rem;
 
   & button {
     width: 100%;
     height: 41px;
-    color: $netflix-white;
     background: $netflix-black;
     border: none;
     margin-bottom: 1.5vw;
     padding: 1vw;
     padding-bottom: 2.5vw;
     border-top: 1vw ridge $netflix-red;
+    font-family: "Abel", sans-serif;
+    font-weight: 700;
+    color: $netflix-white;
 
     &:hover {
       border-top: 1vw ridge $gold;
       cursor: pointer;
-      color: $netflix-black;
       background: $netflix-white;
+      color: $netflix-black;
     }
   }
 

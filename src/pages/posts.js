@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import PostListing from "../components/PostListing"
+import "../styles/blog.css"
 
 const Posts = ({ data, location }) => (
   <Layout location={location}>
@@ -12,6 +13,9 @@ const Posts = ({ data, location }) => (
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <PostListing key={node.id} post={node} />
     ))}
+    <br />
+    <br />
+    <br />
   </Layout>
 )
 

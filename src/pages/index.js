@@ -14,7 +14,16 @@ const AboutDavid = styled.div`
   border: 1px solid black;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 3px 3px black;
+  box-shadow: 0 2px 2px black;
+  background: #f5f5f1;
+  z-index: 5;
+
+  & h1,
+  h5,
+  button,
+  p {
+    color: black;
+  }
 
   @media screen and (max-width: 1000px) {
     display: block;
@@ -29,6 +38,17 @@ const AboutDavid = styled.div`
   }
 `
 
+const SubTitle = styled.h2`
+  @media screen and (max-width: 1000px) {
+    margin: 1rem;
+    margin-top: -1rem;
+    padding: 10px;
+    background: white;
+    color: black;
+    box-shadow: 1px 1px 1px black;
+  }
+`
+
 export default class IndexPage extends Component {
   render() {
     const { location } = this.props
@@ -37,7 +57,7 @@ export default class IndexPage extends Component {
         <IndexMenu />
 
         <h1 className="pageTitle">About Ronnlid Websites</h1>
-        <h5>Company selling website solutions.</h5>
+        <SubTitle>Company selling website solutions.</SubTitle>
         <AboutDavid className="aboutDavid" id="about">
           <Img
             fluid={this.props.data.file.childImageSharp.fluid}
@@ -69,10 +89,9 @@ export default class IndexPage extends Component {
             <>
               {on ? (
                 <>
-                  {" "}
                   <BasicButton onClick={toggle}>
                     Hide technologies used at the company
-                  </BasicButton>{" "}
+                  </BasicButton>
                   <TechStack />
                 </>
               ) : (
