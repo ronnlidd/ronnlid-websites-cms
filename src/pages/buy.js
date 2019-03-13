@@ -142,21 +142,21 @@ export const query = graphql`
         }
       }
     }
-    packageOne: file(relativePath: { regex: "/handshake/" }) {
+    packageOne: file(relativePath: { regex: "/fixedPackageOne/" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    packageTwo: file(relativePath: { regex: "/handshake/" }) {
+    packageTwo: file(relativePath: { regex: "/fixedPackageTwo/" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    packageThree: file(relativePath: { regex: "/handshake/" }) {
+    packageThree: file(relativePath: { regex: "/fixedPackageThree/" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid_tracedSVG

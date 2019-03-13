@@ -76,7 +76,10 @@ const SkuCard = class extends React.Component {
         <h3 className="textColor h3">{sku.attributes.name}</h3>
 
         <p className="textColor">{description}</p>
-        <Img style={{ width: "100%", margin: "0 auto" }} fluid={imgSrc} />
+        <Img
+          style={{ width: "100%", margin: "0 auto", borderRadius: "20px" }}
+          fluid={imgSrc}
+        />
         <ul>
           {listItems.map((item, index) => (
             <li key={index} className="textColor liColor">
