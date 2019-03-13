@@ -88,7 +88,7 @@ const SkuCard = class extends React.Component {
           ))}
         </ul>
         <p className="textColor" style={{ marginBottom: "-.25rem" }}>
-          Price: {formatPrice(sku.price, sku.currency)}
+          Price: <strong>{formatPrice(sku.price, sku.currency)}</strong>
         </p>
         <BasicButtonBuy
           onClick={event => this.redirectToCheckout(event, sku.id)}
