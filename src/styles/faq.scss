@@ -1,15 +1,21 @@
+@import "../partials/color";
+
 .faq {
+  & h4 {
+    background: $dark-blue;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 0.15rem;
+  }
+
   & p {
     padding-bottom: 1.5rem;
-    margin-bottom: 0.75rem;
     padding: 10px;
     margin-top: -0.2rem;
     border-radius: 10px;
     font-weight: 500;
-  }
-
-  & h4 {
-    padding: 10px;
-    border-radius: 10px;
+    color: $white;
+    background: $dark-blue3;
+    margin-bottom: 2rem;
   }
 }

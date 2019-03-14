@@ -7,15 +7,11 @@ import PostListing from "../components/PostListing"
 import "../styles/blog.css"
 
 const Posts = ({ data, location }) => (
-  <Layout location={location}>
+  <Layout location={location} pageTitle="Blog Posts">
     <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Blog Posts</h1>
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <PostListing key={node.id} post={node} />
     ))}
-    <br />
-    <br />
-    <br />
   </Layout>
 )
 

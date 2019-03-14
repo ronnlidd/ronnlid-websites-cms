@@ -2,7 +2,7 @@
 
 footer {
   width: 100%;
-  background: $netflix-black;
+  background: $dark-blue;
   position: absolute;
   left: 0;
   display: block;
@@ -12,26 +12,26 @@ footer {
   & button {
     width: 100%;
     height: 41px;
-    background: $netflix-black;
+    background: $dark-blue;
     border: none;
     margin-bottom: 1.5vw;
-    padding: 1vw;
+    padding: 1.2vw;
     padding-bottom: 2.5vw;
-    border-top: 1vw ridge $netflix-red;
+    border-top: 1vw ridge $dark-blue2;
     font-family: "Abel", sans-serif;
     font-weight: 700;
-    color: $netflix-white;
+    color: $white;
 
     &:hover {
-      border-top: 1vw ridge $gold;
+      border-top: 1vw ridge $dark-blue2;
       cursor: pointer;
-      background: $netflix-white;
-      color: $netflix-black;
+      background: $light-blue;
+      color: $dark-blue;
     }
   }
 
   & .copyRightP {
-    color: $netflix-white;
+    color: $white;
     margin-left: 1vw;
     margin-top: 2vw;
   }
@@ -43,10 +43,10 @@ footer {
     height: 7vh;
 
     & a {
-      color: $gold;
+      color: $light-blue;
 
       &:hover {
-        color: darken($gold, 10%);
+        color: $dark-blue3;
       }
     }
   }

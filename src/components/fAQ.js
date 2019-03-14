@@ -19,11 +19,9 @@ export default class FAQ extends Component {
           answer="Yes. It is very dependent on the needs, but a responsive, simple, static website with social media links and basic company information displayed can go for as little as $200.
         If you want hosting configuration on top of that, which you probably do, you will have to pay more, around $100 for me setting it up. On the other hand, a website which fetches, uses and displays data from a database or APIs (customer login, stores, 3rd party integrations), will be much more expensive. In general it is more or less costly for you dependent on how complex the functionality of your website is. I have these very low prices for websites for a limited time, as my business grows and I evolve as a web developer the websites will become more expensive."
         />
-        <BasicButton>
-          <Link to="/buy#fixedCostPackages">
-            Head over to fixed cost packages to learn more
-          </Link>
-        </BasicButton>
+        <Link to="/buy#fixedCostPackages">
+          <BasicButton>GO TO FIXED COST PACKAGES</BasicButton>
+        </Link>
         <br />
         <br />
 

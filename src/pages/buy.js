@@ -10,24 +10,21 @@ import {
   FlexRow,
 } from "../components/styledComponents"
 import Skus from "../components/Skus"
-import ScndFancyButton from "../components/scndFancyButton"
 
 export default class Buy extends Component {
   render() {
     const { location, data } = this.props
     return (
-      <Layout location={location}>
+      <Layout location={location} pageTitle="Buy">
         <SEO title="Buy" keywords={[`gatsby`, `application`, `react`]} />
-        <h1 className="buyTitle">Buy</h1>
         <Img fluid={data.file.childImageSharp.fluid} className="handshake" />
         <h2>Method 1: Email your requirements</h2>
-        <ScndFancyButton
-          text="Click here to send me an email from your software of choice"
-          firstOrSecond={false}
-          linkTo="mailto:david@ronnlidwebsites.com"
-        />
+        <a href="mailto:david@ronnlidwebsites.com">
+          <BasicButton>SEND AN EMAIL FROM YOUR SOFTWARE OF CHOICE</BasicButton>
+        </a>
         <br />
         <br />
+
         <h2>Method 2: Email your requirements</h2>
         <NetlifyForm
           name="contact"
@@ -73,14 +70,17 @@ export default class Buy extends Component {
           </p>
           <p>
             <BasicButton type="submit" style={{ fontWeight: "300" }}>
-              Send
+              SEND
             </BasicButton>
           </p>
         </NetlifyForm>
         <br />
         <br />
         <h2>Method 3: Choose a fixed cost package</h2>
-        <h4>Make sure to use an email you can use in the checkout.</h4>
+        <h4>
+          In the next step, use an email you have access to and can send emails
+          from.
+        </h4>
         <FlexRow id="fixedCostPackages">
           <Skus
             description={[
@@ -124,6 +124,7 @@ export default class Buy extends Component {
                 "Max 40 pages",
               ],
             ]}
+            choices={[false, true, false]}
           />
         </FlexRow>
         <br />

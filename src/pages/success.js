@@ -4,8 +4,7 @@ import Layout from "../components/layout"
 export class Success extends Component {
   render() {
     return (
-      <Layout>
-        <h1>Successfully bought a fixed cost package.</h1>
+      <Layout pageTitle="Successfully bought a fixed cost package">
         <h3>Thanks and congratulations. Happy to be in business with you.</h3>
         <p>
           I will reach out to the email you used when purchasing the package
@@ -37,7 +36,6 @@ export class Success extends Component {
             reach out to me.
           </a>
         </p>
-        <br />
       </Layout>
     )
   }

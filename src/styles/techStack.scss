@@ -7,25 +7,29 @@
   justify-content: center;
 
   & .technologyComponent {
-    background: $netflix-white;
+    background: $dark-blue3;
     width: 25vw;
     padding: 10px;
     margin: 10px;
-    border: 1px solid black;
+    border: 1px solid $white;
     border-radius: 10% 0;
 
     & p {
       font-size: 1rem;
-      color: $netflix-black;
+      color: $white;
     }
 
     & h1 {
-      color: $netflix-black;
+      color: $white;
       font-size: 2rem;
     }
 
     & .technologyImg {
       height: 40px;
+    }
+
+    & .readMore {
+      color: $light-blue;
     }
   }
 }
@@ -41,7 +45,7 @@
       width: 90vw;
       padding: 15px;
       margin: 10px;
-      border: 1px solid rgb(208, 190, 190);
+      border: 1px solid $light-blue;
       border-radius: 10% 0;
 
       & p {

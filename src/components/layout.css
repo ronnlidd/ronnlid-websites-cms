@@ -9,15 +9,8 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white;
-  background: repeating-radial-gradient(
-    circle,
-    #111,
-    #221f1f 322px,
-    #42519c 989px,
-    #48529c 10331px
-  );
-  background-size: 223vw 23vw;
+  color: #0b132b;
+  background: #1c2541;
 }
 article,
 aside,

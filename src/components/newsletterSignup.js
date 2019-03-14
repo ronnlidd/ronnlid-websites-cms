@@ -3,13 +3,12 @@ import { BasicButton, NetlifyForm } from "./styledComponents"
 import styled from "styled-components"
 
 const NewsletterInput = styled.input`
-  color: black;
-  border: 1px solid #4285f4;
+  border: 1px solid #1c2541;
   font-weight: 100;
   font-family: sans-serif;
   border-radius: 6px;
-  color: white;
-  background: darkblue;
+  color: #0b132b;
+  background: #fff;
   margin-left: 3px;
   margin-right: 10px;
   margin-top: 6px;
@@ -27,7 +26,7 @@ export default class NewsletterSignup extends Component {
         style={{ width: "90%", margin: "0 auto" }}
       >
         <label>
-          <strong style={{ color: "white" }}>
+          <strong style={{ fontFamily: "abel, sans-serif", color: "white" }}>
             Sign up for the RW newsletter:
           </strong>{" "}
           <NewsletterInput
@@ -40,13 +39,12 @@ export default class NewsletterSignup extends Component {
         <BasicButton
           type="submit"
           style={{
-            color: "black",
             fontWeight: "300",
             width: "40vw",
             border: "1px solid white",
           }}
         >
-          Sign me up!
+          SIGN ME UP!
         </BasicButton>
       </NetlifyForm>
     )

@@ -8,21 +8,15 @@ export default class ContactSuccess extends Component {
   render() {
     const { location } = this.props
     return (
-      <Layout location={location}>
+      <Layout location={location} pageTitle="Success!">
         <SEO title="Success" keywords={[`gatsby`, `application`, `react`]} />
-        <div>
-          <h1>Success!</h1>
-          <p>
-            You just filled in a form, the contents have been sent to David
-            Rönnlid!
-          </p>
-          <Link to="/">
-            <BasicButton>Go to home</BasicButton>
-          </Link>
-          <br />
-          <br />
-          <br />
-        </div>
+        <p>
+          You just filled in a form, the contents have been sent to David
+          Rönnlid!
+        </p>
+        <Link to="/">
+          <BasicButton>GO TO HOME</BasicButton>
+        </Link>
       </Layout>
     )
   }

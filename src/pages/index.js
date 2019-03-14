@@ -11,18 +11,18 @@ import FAQ from "../components/fAQ"
 import IndexMenu from "../components/indexMenu"
 
 const AboutDavid = styled.div`
-  border: 1px solid black;
+  border: 1px solid #fff;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 2px 2px black;
-  background: #f5f5f1;
+  box-shadow: 0 2px 2px #0b132b;
+  background: #3a506b;
   z-index: 5;
 
   & h1,
   h5,
   button,
   p {
-    color: black;
+    color: #fff;
   }
 
   @media screen and (max-width: 1000px) {
@@ -38,26 +38,14 @@ const AboutDavid = styled.div`
   }
 `
 
-const SubTitle = styled.h2`
-  @media screen and (max-width: 1000px) {
-    margin: 1rem;
-    margin-top: -1rem;
-    padding: 10px;
-    background: white;
-    color: black;
-    box-shadow: 1px 1px 1px black;
-  }
-`
-
 export default class IndexPage extends Component {
   render() {
     const { location } = this.props
     return (
-      <Layout location={location}>
+      <Layout location={location} pageTitle="About Ronnlid Websites">
         <IndexMenu />
 
-        <h1 className="pageTitle">About Ronnlid Websites</h1>
-        <SubTitle>Company selling website solutions.</SubTitle>
+        <h2>Company selling website solutions.</h2>
         <AboutDavid className="aboutDavid" id="about">
           <Img
             fluid={this.props.data.file.childImageSharp.fluid}
@@ -69,7 +57,7 @@ export default class IndexPage extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BasicButton>David Rönnlid on LinkedIn</BasicButton>
+            <BasicButton>DAVID RÖNNLID ON LINKEDIN</BasicButton>
           </a>
           <p>
             Ronnlid Websites is owned and founded by David Rönnlid, 18 years
