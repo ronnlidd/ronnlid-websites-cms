@@ -1,0 +1,12 @@
+@import "../partials/color";
+
+@mixin box() {
+  background: $dark-blue3;
+  color: $white;
+  border: 1px solid $white;
+  box-shadow: 0 1px 1px $dark-blue;
+
+  & a {
+    color: $light-blue;
+  }
+}

@@ -1,0 +1,44 @@
+@import "../partials/color";
+
+.desktopHeader {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .desktopHeader {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 200px;
+    width: 14vw;
+
+    & ul {
+      list-style: none;
+      background: $dark-blue3;
+      & li {
+        text-align: center;
+        border-top: 1px solid $white;
+        box-shadow: 0 1px 1px $dark-blue;
+        border-bottom: 1px solid $white;
+        border-left: 1px solid $white;
+        margin: 0;
+        padding: 0.5rem;
+        padding-left: 0;
+        font-family: abel, sans-serif;
+
+        & a {
+          color: $white;
+          text-decoration: none;
+        }
+
+        & :hover {
+          color: $light-blue;
+        }
+
+        & .homeButton {
+          border-top-left-radius: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,29 +1,39 @@
-import React from "react";
+import React from "react"
 
 export default class Technology extends React.Component {
   render() {
+    const {
+      title,
+      image,
+      aka,
+      an,
+      sort,
+      reasonForUse,
+      officialDocs,
+    } = this.props
+
     return (
       <div className="technologyComponent">
-        <h1>{this.props.title}</h1>
+        <h1>{title}</h1>
         <img
           className="technologyImg"
-          src={this.props.image}
+          src={image}
           alt="One of the used technologies"
         />
 
         <p>
-          {this.props.title}, also referred to as {this.props.aka}, is{" "}
-          {this.props.an ? "an" : "a"} {this.props.sort}. The reason to use{" "}
-          {this.props.title} is to {this.props.reasonForUse}.
+          {title}, also referred to as {aka}, is {an ? "an" : "a"} {sort}. The
+          reason to use {title} is to {reasonForUse}.
         </p>
         <a
-          href={this.props.officialDocs}
+          href={officialDocs}
           target="_blank"
           rel="noopener noreferrer"
+          className="readMore"
         >
           You can read more here
         </a>
       </div>
-    );
+    )
   }
 }

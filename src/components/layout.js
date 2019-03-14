@@ -1,19 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
+import styled from "styled-components"
 
 import Header from "./header"
 import "./layout.css"
-import "../styles/lightMode.css"
 import Footer from "./footer"
-import Toggle from "../components/toggle"
-import { BasicButton } from "../components/styledComponents"
 import Img from "gatsby-image"
-import { Helmet } from "react-helmet"
-
-import styled from "styled-components"
-
-const LightModeStyle = styled.div``
 
 const ImgRemoverOnSmallScreen = styled.div`
   img {
@@ -27,7 +21,7 @@ const ImgRemoverOnSmallScreen = styled.div`
   }
 `
 
-const Layout = ({ children, location }) => (
+const Layout = ({ children, pageTitle, location }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -35,14 +29,6 @@ const Layout = ({ children, location }) => (
           siteMetadata {
             title
             description
-          }
-        }
-
-        background: file(relativePath: { eq: "backg.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
-            }
           }
         }
         desktopBackground: file(relativePath: { eq: "desktopHeader.png" }) {
@@ -60,21 +46,6 @@ const Layout = ({ children, location }) => (
             }
           }
         }
-        ronnlid: file(relativePath: { eq: "ronnlid.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 2000) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-
-        websites: file(relativePath: { eq: "websites.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 2000) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     `}
     render={data => (
@@ -85,119 +56,44 @@ const Layout = ({ children, location }) => (
             src="https://www.googletagmanager.com/gtag/js?id=UA-132982458-1"
           />
         </Helmet>
-        <Toggle>
-          {({ on, toggle }) => (
-            <>
-              {on ? (
-                <>
-                  <Header
-                    siteTitle={data.site.siteMetadata.title}
-                    background={data.background.childImageSharp.fluid}
-                    logo={data.file.childImageSharp.fluid}
-                    location={location}
-                  />
-                  <BasicButton
-                    onClick={toggle}
-                    style={{
-                      borderLeft: "none",
-                      borderBottomRightRadius: ".6rem",
-                      borderTopRightRadius: ".6rem",
-                      paddingLeft: "1rem",
-                      marginLeft: "-1rem",
-                      width: "200px",
-                    }}
-                  >
-                    Toggle Light Mode <i className="fas fa-lightbulb" />
-                  </BasicButton>
-                  <ImgRemoverOnSmallScreen>
-                    <Img
-                      fluid={data.desktopBackground.childImageSharp.fluid}
-                      className="desktopBackground"
-                      style={{
-                        width: "45vw",
-                        position: "absolute",
-                        transform: "rotate(-120deg)",
-                        top: "-1vw",
-                        left: "1vw",
-                      }}
-                    />
-                    <Img
-                      fluid={data.desktopBackground.childImageSharp.fluid}
-                      className="desktopBackgroundTwo"
-                      style={{
-                        width: "45vw",
-                        position: "absolute",
-                        transform: "rotate(-45deg)",
-                        top: "-1vw",
-                        right: "2vw",
-                        overflow: "hidden",
-                      }}
-                    />
-                  </ImgRemoverOnSmallScreen>
 
-                  <main style={{ width: "80vw", margin: "0 auto" }}>
-                    {children}
-                  </main>
-                  <Footer imgSrc={data.file.childImageSharp.fluid} />
-                </>
-              ) : (
-                <LightModeStyle className="lightMode">
-                  <Header
-                    siteTitle={data.site.siteMetadata.title}
-                    background={data.background.childImageSharp.fluid}
-                    logo={data.file.childImageSharp.fluid}
-                    location={location}
-                  />
-                  <BasicButton
-                    onClick={toggle}
-                    style={{
-                      borderLeft: "none",
-                      borderBottomRightRadius: ".6rem",
-                      borderTopRightRadius: ".6rem",
-                      paddingLeft: "1rem",
-                      marginLeft: "-1rem",
-                      width: "200px",
-                    }}
-                  >
-                    Toggle Light Mode <i className="far fa-lightbulb" />
-                  </BasicButton>
-                  <ImgRemoverOnSmallScreen>
-                    <Img
-                      fluid={data.desktopBackground.childImageSharp.fluid}
-                      className="desktopBackground"
-                      style={{
-                        width: "45vw",
-                        position: "absolute",
-                        transform: "rotate(-120deg)",
-                        top: "-1vw",
-                        left: "1vw",
-                      }}
-                    />
-                    <Img
-                      fluid={data.desktopBackground.childImageSharp.fluid}
-                      className="desktopBackgroundTwo"
-                      style={{
-                        width: "45vw",
-                        position: "absolute",
-                        transform: "rotate(-45deg)",
-                        top: "-1vw",
-                        right: "2vw",
-                        overflow: "hidden",
-                      }}
-                    />
-                  </ImgRemoverOnSmallScreen>
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          logo={data.file.childImageSharp.fluid}
+          location={location}
+        />
 
-                  <main
-                    style={{ width: "80vw", margin: "0 auto -25.9px auto" }}
-                  >
-                    {children}
-                  </main>
-                  <Footer imgSrc={data.file.childImageSharp.fluid} />
-                </LightModeStyle>
-              )}
-            </>
-          )}
-        </Toggle>
+        <ImgRemoverOnSmallScreen>
+          <Img
+            fluid={data.desktopBackground.childImageSharp.fluid}
+            className="desktopBackground"
+            style={{
+              width: "45vw",
+              position: "absolute",
+              transform: "rotate(-120deg)",
+              top: "-1vw",
+              left: "1vw",
+            }}
+          />
+          <Img
+            fluid={data.desktopBackground.childImageSharp.fluid}
+            className="desktopBackgroundTwo"
+            style={{
+              width: "45vw",
+              position: "absolute",
+              transform: "rotate(-45deg)",
+              top: "-1vw",
+              right: "2vw",
+              overflow: "hidden",
+            }}
+          />
+        </ImgRemoverOnSmallScreen>
+
+        <main style={{ width: "85vw", margin: "2.5rem auto 1rem auto" }}>
+          <h1>{pageTitle}</h1>
+          {children}
+        </main>
+        <Footer imgSrc={data.file.childImageSharp.fluid} />
       </>
     )}
   />

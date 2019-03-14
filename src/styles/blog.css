@@ -2,9 +2,10 @@
 .postExcerpt {
   padding: 1rem;
   border-radius: 1rem;
-  background: linear-gradient(to bottom right, #00ddff, rgba(221, 255, 0, 0.408));
-  border: 1px solid black;
-  box-shadow: 0 1px 1px black;
+  background: #3a506b;
+  background-size: 55px 20px;
+  border: 1px solid #fff;
+  box-shadow: 0 1px 1px #0b132b;
   padding: 1rem;
   border-radius: 1rem; }
   .blogPost h1,
@@ -15,11 +16,7 @@
   .postExcerpt div,
   .postExcerpt p,
   .postExcerpt span {
-    color: black; }
-
-.mediaQueryBasicButtonMobile {
-  display: none; }
-
-@media screen and (max-width: 499.9px) {
-  .mediaQueryBasicButtonMobile {
-    display: block; } }
+    color: #fff; }
+  .blogPost h3 a,
+  .postExcerpt h3 a {
+    color: #5bc0be; }

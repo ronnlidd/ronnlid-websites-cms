@@ -6,21 +6,17 @@ import { BasicButton } from "../components/styledComponents"
 export class Success extends Component {
   render() {
     return (
-      <Layout>
-        <h1>Canceled buying fixed cost package</h1>
+      <Layout pageTitle="Canceled buying fixed cost package">
         <Link to="/buy">
           <BasicButton>
-            Go to <i>Buy</i>
+            GO TO <i>BUY</i>
           </BasicButton>
         </Link>
         <Link to="/">
           <BasicButton>
-            Go to <i>Home</i>
+            GO TO <i>HOME</i>
           </BasicButton>
         </Link>
-        <br />
-        <br />
-        <br />
       </Layout>
     )
   }

@@ -3,13 +3,7 @@
 @import "../partials/border";
 
 .lightMode {
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    #bf9 3px,
-    #cfc 9px,
-    #ffc 40vw
-  );
+  background: $light-blue;
 
   & h1,
   h2,
@@ -18,108 +12,114 @@
   h5,
   h6,
   p {
-    color: black;
+    color: $dark-blue;
   }
 
   & #homeNav {
-    background: $netflix-black;
+    background: $dark-blue2;
     border: 1px solid white;
 
     & h2 {
-      color: $netflix-white;
-      border-bottom: 1px solid white;
+      color: $white;
+      border-bottom: 1px solid $white;
     }
     & li {
       & a {
-        color: white;
+        color: $white;
       }
     }
   }
 
   & .aboutDavid {
-    background: $netflix-black;
+    background: $dark-blue2;
 
     & h2 {
-      color: $netflix-black;
-      background: white;
+      color: $dark-blue;
+      background: $white;
     }
 
     & p {
-      color: $netflix-white;
+      color: $white;
+    }
+
+    & button {
+      color: $white;
     }
   }
 
-  & .card {
-    background: $netflix-black;
+  & .valuePropositionCards {
+    & .card {
+      background: $dark-blue;
 
-    & h2 {
-      background: $netflix-red;
-      color: $netflix-white;
-      border: 2px solid $netflix-black;
+      & h2 {
+        background: $dark-blue2;
+        color: $white;
+        border: 2px solid $light-blue;
 
-      @include BS-slight-down;
-    }
+        @include BS-slight-down;
+      }
 
-    & h4 {
-      color: white;
+      & h4 {
+        color: $white;
 
-      & ul {
-        @include groove-border(0.25rem, $netflix-red);
-        background: $netflix-black;
-        color: $netflix-white;
-        & li {
-          border: 1px solid $google-blue;
+        & ul {
+          @include groove-border(0.25rem, $dark-blue);
+          background: $dark-blue;
+          color: $white;
+          & li {
+            border: 1px solid $dark-blue3;
 
-          & a {
-            color: lighten($google-blue, 25%);
-
-            &:hover {
-              color: $google-blue;
+            & a {
+              color: $dark-blue3;
+              &:hover {
+                color: $dark-blue2;
+              }
             }
-          }
 
-          & .fa-check-square {
-            color: $google-green;
+            & .fa-check-square {
+              color: $light-blue;
+            }
           }
         }
       }
     }
   }
+
   & .faq {
     & h4 {
-      background: $netflix-black;
-      color: $netflix-white;
+      background: $dark-blue;
+      color: $white;
     }
     & p {
-      background: $google-blue;
-      color: $netflix-white;
+      background: $white;
+      color: $dark-blue;
     }
     padding-bottom: 2rem;
   }
 
   & .techStack {
     & .technologyComponent {
-      background: black;
+      background: $dark-blue;
       box-shadow: 0px 2px 2px black;
       & h1,
       p {
-        color: $netflix-white;
+        color: $white;
       }
 
       & a {
-        color: #f5f;
+        color: $light-blue;
       }
     }
   }
 
   & .packageWrapper {
-    background: $netflix-black;
+    background: $dark-blue;
 
     & h3 {
       padding: 1rem;
       background: $google-blue;
-      box-shadow: 0 2px 2px $netflix-black;
-      border: 2px ridge $netflix-white;
+      box-shadow: 0 2px 2px $dark-blue;
+      border: 2px ridge $white;
     }
 
     & .textColor {
@@ -133,20 +133,16 @@
 
   & .blogPost,
   .postExcerpt {
-    background: linear-gradient(
-      to bottom right,
-      rgb(255, 70, 70),
-      rgb(0, 0, 0)
-    );
+    background: rgb(255, 46, 46);
     border: 1px solid black;
-    box-shadow: 0 1px 1px $netflix-black;
+    box-shadow: 0 1px 1px $dark-blue;
     padding: 1rem;
     border-radius: 1rem;
     & h1,
     div,
     p,
     span {
-      color: $netflix-white;
+      color: $white;
     }
   }
 }

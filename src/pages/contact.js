@@ -7,11 +7,8 @@ import { NetlifyForm } from "../components/styledComponents"
 import { BasicButton } from "../components/styledComponents"
 
 const Contact = ({ data, location }) => (
-  <Layout location={location}>
+  <Layout location={location} pageTitle="Contact">
     <SEO title="Contact" keywords={[`Contact`, `Email`, `Inquiries`]} />
-    <h1 className="pageTitle" style={{ position: "relative", top: "1rem" }}>
-      Contact
-    </h1>
     <p>
       You <i>can</i> send website inquiries here, <br />
       but I recommend going to the{" "}
@@ -65,11 +62,10 @@ const Contact = ({ data, location }) => (
       </p>
       <p>
         <BasicButton type="submit" style={{ fontWeight: "300" }}>
-          Send feedback, requirements or other
+          SEND FEEDBACK OR REQUIREMENTS
         </BasicButton>
       </p>
     </NetlifyForm>
-    <br />
   </Layout>
 )
 

@@ -17,7 +17,7 @@ class Skus extends Component {
 
   render() {
     const { stripe } = this.state
-    const { description, imgSrc, listItems } = this.props
+    const { description, imgSrc, listItems, choices } = this.props
 
     return (
       <StaticQuery
@@ -50,6 +50,7 @@ class Skus extends Component {
                 description={description[idx]}
                 imgSrc={imgSrc[idx]}
                 listItems={listItems[idx]}
+                choices={choices[idx]}
               />
             ))}
           </>

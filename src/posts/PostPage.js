@@ -3,7 +3,6 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
-import FancyButton from "../components/FancyButton"
 import { BasicButton } from "../components/styledComponents"
 import "../styles/fancyButton.css"
 import "../styles/blog.css"
@@ -15,16 +14,10 @@ export class PostPage extends Component {
       <Layout location={location}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <Link to="/posts">
-          <FancyButton>
-            Go back to <i>Blog Posts</i>
-          </FancyButton>
+          <BasicButton>
+            GO BACK TO <i>BLOG POSTS</i>
+          </BasicButton>
         </Link>
-        <BasicButton className="mediaQueryBasicButtonMobile">
-          <Link to="/posts">
-            Go back to <i>Blog Posts</i>
-          </Link>
-        </BasicButton>
-        <br />
 
         <div className="blogPost">
           <h1>{data.markdownRemark.frontmatter.title}</h1>
@@ -35,24 +28,16 @@ export class PostPage extends Component {
             }}
           />
         </div>
-        <br />
         <Link to="/posts">
-          <FancyButton>
-            Go back to <i>Blog Posts</i>
-          </FancyButton>
-        </Link>
-        <BasicButton className="mediaQueryBasicButtonMobile">
-          <Link to="/posts">
-            Go back to <i>Blog Posts</i>
-          </Link>
-        </BasicButton>
-        <Link to="/">
           <BasicButton>
-            Go to <i>Home</i>
+            GO BACK TO <i>BLOG POSTS</i>
           </BasicButton>
         </Link>
-        <br />
-        <br />
+        <Link to="/">
+          <BasicButton>
+            GO TO <i>HOME</i>
+          </BasicButton>
+        </Link>
       </Layout>
     )
   }
