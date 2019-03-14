@@ -77,10 +77,12 @@ export default class Buy extends Component {
         <br />
         <br />
         <h2>Method 3: Choose a fixed cost package</h2>
+
         <h4>
           In the next step, use an email you have access to and can send emails
           from.
         </h4>
+
         <FlexRow id="fixedCostPackages">
           <Skus
             description={[
@@ -127,8 +129,10 @@ export default class Buy extends Component {
             choices={[false, true, false]}
           />
         </FlexRow>
-        <br />
-        <br />
+        <Img
+          fluid={data.securedbystripe.childImageSharp.fluid}
+          className="securedByStripe"
+        />
       </Layout>
     )
   }
@@ -137,6 +141,13 @@ export default class Buy extends Component {
 export const query = graphql`
   query Image {
     file(relativePath: { regex: "/handshake/" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    securedbystripe: file(relativePath: { regex: "/securedbystripe/" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid_tracedSVG
