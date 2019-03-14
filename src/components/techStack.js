@@ -5,7 +5,6 @@ import JavaScriptImg from "../images/javascript.jpg"
 import HTML5Img from "../images/html5.jpg"
 import CSS3Img from "../images/css3.jpg"
 import SASSImg from "../images/sass.jpg"
-import BootstrapImg from "../images/bootstrap.jpg"
 import GatsbyImg from "../images/gatsby.png"
 import GraphQLImg from "../images/GraphQL.png"
 import NetlifyImg from "../images/netlify.png"
@@ -55,14 +54,6 @@ export default class TechStack extends React.Component {
           an={true}
           aka="SASS"
           reasonForUse="style a website faster and with more readable code than CSS, which SCSS will eventually be compiled to"
-        />
-        <Technology
-          title="Bootstrap"
-          officialDocs="https://getbootstrap.com/"
-          aka="Bootstrap 4"
-          image={BootstrapImg}
-          sort="library"
-          reasonForUse="build responsive customizable websites quickly by means of code re-use"
         />
 
         <Technology
