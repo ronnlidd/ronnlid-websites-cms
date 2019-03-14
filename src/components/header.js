@@ -12,7 +12,7 @@ const HeaderContainer = styled.div`
   position: relative;
 
   .ronnlidWebsitesLogo {
-    width: 150px;
+    width: 220px;
     margin-left: 1rem;
   }
 
