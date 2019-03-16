@@ -34,7 +34,6 @@ export const NetlifyForm = styled.form`
     padding: .5rem;
     height: 10rem;
     font-weight: 300;
-    border: 1px solid #4285f4;
     border-radius: 6px;
     color: #0b132b;
     background: #fff;

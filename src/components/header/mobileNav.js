@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import Toggle from "../components/toggle"
+import Toggle from "../toggle"
 import { Link } from "gatsby"
 
 const MainNav = styled.nav`
@@ -31,76 +31,71 @@ ul {
     align-items: flex-start;
     justify-items: flex-start;
     list-style: none;
-    padding: 6px 6px 6px 0;
     border: 1px solid #fff;
     border-right: none;
     background: #0b132b;
     max-width: 100%;
     box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.75);
     font-family: sans-serif;
-    margin-top: 1rem;
     border-bottom-left-radius: 2.5rem;
     border-top-left-radius: 2.5rem;
 
-    li {
-      padding: 2px;
+    & li {
+      padding: 1rem;
       border-bottom: 2px ridge #fff;
-      margin-left: 20px;
+      margin-left: 1rem;
       -webkit-transition: border-bottom 0.3s;
       transition: border-bottom 0.3s;
       color: #5bc0be;
       & :hover {
         cursor: pointer;
         color: #3a506b;
+        border-bottom-color: #0b132b;
         
         & a {
           color: #3a506b;
         }
-        border-bottom-color: #0b132b;
       }
-
       & a {
         text-decoration: none;
         color: #fff;
+        }
       }
     }
+    .closeAndOpenBorderBottom {
+      border-bottom: none;
+      margin-top: 6px;
     }
   }
 
   @media screen and (max-width: 450px) {
     & ul {
-      max-height: 3rem;
+      max-height: 4rem;
       & li {
         visibility: hidden;
+        margin-left: 1rem;
         & span { display: none;
         }
           & i {
           visibility: visible;
           padding-bottom: .5rem;
           border-bottom: 1px solid #fff;
-          margin: 0 -.3rem;
+          margin: 0 -.6rem;
+          width: 1.82rem;
 
           & :hover {
-            border-bottom: 1px solid #3a506b;    
+            border-bottom-color: #3a506b;    
           }
         }
+      }
+      & .closeAndOpenBorderBottom {
+        border-bottom: none;
+        margin-top: 3px;
       }
     } 
   }
 }
 
-.noBorderBottom {
-  border-bottom: none;
-  margin-top: 3px;
-
-  & :hover {
-    border-bottom: none;
-  }
-}
-
-  .extraMarginTop {
-    margin-top: 7px;
-  }
 `
 
 export class MobileNav extends Component {
@@ -112,10 +107,10 @@ export class MobileNav extends Component {
             {on ? (
               <MainNav>
                 <ul className="slideInMenu">
-                  <li onClick={toggle}>
+                  <li onClick={toggle} className="closeAndOpenBorderBottom">
                     <i
                       title="Toggle to close"
-                      className="fas fa-times noBorderBottom extraMarginTop"
+                      className="fas fa-times closeAndOpenBorderBottom"
                     />
                   </li>
                   <li>
@@ -147,10 +142,10 @@ export class MobileNav extends Component {
             ) : (
               <MainNav>
                 <ul>
-                  <li onClick={toggle} className="noBorderBottom">
+                  <li onClick={toggle} className="closeAndOpenBorderBottom">
                     <i
                       title="Toggle to open"
-                      className="fas fa-bars noBorderBottom"
+                      className="fas fa-bars closeAndOpenBorderBottom"
                     />
                   </li>
                 </ul>
