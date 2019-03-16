@@ -1,0 +1,14 @@
+.saljande {
+  color: #fff;
+  list-style: none; }
+  .saljande li {
+    background: #0b132b;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    padding: 1rem; }
+
+.mindreSmarta {
+  background: #0b132b;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  padding: 1rem; }

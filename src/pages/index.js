@@ -8,6 +8,7 @@ import styled from "styled-components"
 import { BasicButton } from "../components/styledComponents"
 import FAQ from "../components/fAQ"
 import ValueProposition from "../components/valueProposition"
+import { Link } from "gatsby"
 
 const AboutDavid = styled.div`
   border: 1px solid #fff;
@@ -41,7 +42,11 @@ export default class IndexPage extends Component {
   render() {
     const { location } = this.props
     return (
-      <Layout location={location} pageTitle="Home">
+      <Layout location={location} pageTitle="Value Proposition">
+        <Link to="/svenska">
+          <BasicButton>Gå till Svenska (Swedish Info for locals)</BasicButton>
+        </Link>
+
         <ValueProposition />
         <br />
         <h1>About Ronnlid Websites</h1>
@@ -88,6 +93,10 @@ export default class IndexPage extends Component {
             </>
           )}
         </Toggle>
+
+        <br />
+        <br />
+
         <FAQ />
       </Layout>
     )

@@ -55,14 +55,13 @@ export class ValueProposition extends Component {
     const { showTime, showMoney, showCustomers } = this.state
     return (
       <div className="valueProposition" id="value-proposition">
-        <h1 style={{ marginTop: "10px" }}>Value proposition</h1>
         <h3>
-          Reducing the pain of a website, while increasing the joy of it, for
+          Reducing the pain and increasing the joy of using a website, for
           owners and customers.
         </h3>
         <h2 className="slogan">
           <em>Experience is the ultimate source of value</em>
-        </h2>{" "}
+        </h2>
         <h3>
           <span className="mediaQueryTap">Tap</span>
           <span className="mediaQueryClick">Click</span> to view more

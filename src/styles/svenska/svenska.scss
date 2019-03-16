@@ -1,0 +1,23 @@
+@import "../../partials/color";
+
+.saljande {
+  //   background: $dark-blue3;
+  color: $white;
+  //   border: 1px solid $white;
+  //   box-shadow: 0 1px 1px $dark-blue;
+  list-style: none;
+
+  & li {
+    background: $dark-blue;
+    border: 1px solid $white;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+}
+
+.mindreSmarta {
+  background: $dark-blue;
+  border: 1px solid $white;
+  border-radius: 1rem;
+  padding: 1rem;
+}

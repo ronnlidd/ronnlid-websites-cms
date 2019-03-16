@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import styled from "styled-components"
 
-import Header from "./header"
+import Header from "./header/header"
 import "./layout.css"
 import Footer from "./footer"
 import Img from "gatsby-image"
@@ -39,7 +39,7 @@ const Layout = ({ children, pageTitle, location }) => (
           }
         }
 
-        file(relativePath: { regex: "/newLogov3/" }) {
+        file(relativePath: { regex: "/newLogov4/" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid

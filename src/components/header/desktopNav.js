@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import "../styles/desktopHeader.css"
+import "../../styles/desktopHeader.css"
 import { Link } from "gatsby"
 import IndexMenu from "./indexMenu"
 
@@ -12,17 +12,11 @@ export default class DesktopNav extends Component {
     }
 
     this.onHovering = this.onHovering.bind(this)
-    this.onQuitHovering = this.onQuitHovering.bind(this)
   }
 
   onHovering() {
     this.setState({
       hovering: true,
-    })
-  }
-  onQuitHovering() {
-    this.setState({
-      hovering: false,
     })
   }
 
@@ -31,7 +25,7 @@ export default class DesktopNav extends Component {
     return (
       <div className="desktopHeader">
         <ul>
-          <li onMouseOver={this.onHovering} onMouseLeave={this.onQuitHovering}>
+          <li onMouseOver={this.onHovering}>
             <Link to="/">
               <i title="Home" className="fas fa-home" /> <span>HOME</span>
             </Link>
