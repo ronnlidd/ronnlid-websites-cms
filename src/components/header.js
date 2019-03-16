@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import Helmet from "react-helmet"
 import DesktopNav from "../components/desktopNav"
 import MobileNav from "../components/mobileNav"
-
 const HeaderContainer = styled.div`
   margin: 1rem auto;
   padding: 0.85rem 0;

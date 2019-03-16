@@ -6,6 +6,15 @@
   @media screen and (max-width: 750px) {
     .valueProposition .valuePropositionTitle {
       font-size: 1.5rem; } }
+.valueProposition .mediaQueryClick,
+.valueProposition .mediaQueryTap {
+  display: none; }
+@media screen and (max-width: 980px) {
+  .valueProposition .mediaQueryTap {
+    display: inline; } }
+@media screen and (min-width: 980px) {
+  .valueProposition .mediaQueryClick {
+    display: inline; } }
 .valueProposition .slogan {
   text-align: center;
   width: 100%;

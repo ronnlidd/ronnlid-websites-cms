@@ -36,7 +36,7 @@ export default class TechStack extends React.Component {
           image={GraphQLImg}
           aka="the new way to query data"
           sort="spec"
-          reasonForUse="query data by hitting for (mainly) APIs. This is useful in many instances, for example if you want to display the amount of followers you have on twitter on your website"
+          reasonForUse="query data (mainly APIs). The benefit of using GraphQL is that you get back exactly the data you query, as opposed to a whole batch of resources as in for example REST APIs, one of the most popular aleternatives"
         />
         <Technology
           title="React"
