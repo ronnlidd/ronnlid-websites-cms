@@ -42,13 +42,6 @@ ul {
     border-bottom-left-radius: 2.5rem;
     border-top-left-radius: 2.5rem;
 
-.fa-lock-open {
-  color: #5bc0be;
-  &:hover {
-    color: #3a506b;
-  }
-}
-
     li {
       padding: 2px;
       border-bottom: 2px ridge #fff;
@@ -95,6 +88,19 @@ ul {
     } 
   }
 }
+
+.noBorderBottom {
+  border-bottom: none;
+  margin-top: 3px;
+
+  & :hover {
+    border-bottom: none;
+  }
+}
+
+  .extraMarginTop {
+    margin-top: 7px;
+  }
 `
 
 export class MobileNav extends Component {
@@ -107,7 +113,10 @@ export class MobileNav extends Component {
               <MainNav>
                 <ul className="slideInMenu">
                   <li onClick={toggle}>
-                    <i title="Toggle to close" className="fas fa-lock-open" />
+                    <i
+                      title="Toggle to close"
+                      className="fas fa-times noBorderBottom extraMarginTop"
+                    />
                   </li>
                   <li>
                     <Link to="/">
@@ -138,8 +147,11 @@ export class MobileNav extends Component {
             ) : (
               <MainNav>
                 <ul>
-                  <li onClick={toggle}>
-                    <i title="Toggle to open" className="fas fa-lock" />
+                  <li onClick={toggle} className="noBorderBottom">
+                    <i
+                      title="Toggle to open"
+                      className="fas fa-bars noBorderBottom"
+                    />
                   </li>
                 </ul>
               </MainNav>

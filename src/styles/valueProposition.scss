@@ -10,6 +10,23 @@
     @include stdh1;
   }
 
+  .mediaQueryClick,
+  .mediaQueryTap {
+    display: none;
+  }
+
+  @media screen and (max-width: 980px) {
+    .mediaQueryTap {
+      display: inline;
+    }
+  }
+
+  @media screen and (min-width: 980px) {
+    .mediaQueryClick {
+      display: inline;
+    }
+  }
+
   & .slogan {
     text-align: center;
     width: 100%;

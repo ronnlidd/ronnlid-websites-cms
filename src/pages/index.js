@@ -5,10 +5,9 @@ import Img from "gatsby-image"
 import TechStack from "../components/techStack"
 import Toggle from "../components/toggle"
 import styled from "styled-components"
-import ValueProposition from "../components/valueProposition"
 import { BasicButton } from "../components/styledComponents"
 import FAQ from "../components/fAQ"
-import IndexMenu from "../components/indexMenu"
+import ValueProposition from "../components/valueProposition"
 
 const AboutDavid = styled.div`
   border: 1px solid #fff;
@@ -42,9 +41,10 @@ export default class IndexPage extends Component {
   render() {
     const { location } = this.props
     return (
-      <Layout location={location} pageTitle="About Ronnlid Websites">
-        <IndexMenu />
-
+      <Layout location={location} pageTitle="Home">
+        <ValueProposition />
+        <br />
+        <h1>About Ronnlid Websites</h1>
         <h2>Company selling website solutions.</h2>
         <AboutDavid className="aboutDavid" id="about">
           <Img
@@ -60,38 +60,34 @@ export default class IndexPage extends Component {
             <BasicButton>DAVID RÖNNLID ON LINKEDIN</BasicButton>
           </a>
           <p>
-            Ronnlid Websites is owned and founded by David Rönnlid, 18 years
-            old, web developer (mainly front-end) & entrepreneur. My vision is
-            no less than a world where people are experiencing more well-being.
-            I try to boost love and reduce suffering by accruing power to
-            influence reality, including the society within which the people who
-            can experience more or less valuably exist. This company & coding is
-            a means to that end.
+            Ronnlid Websites is owned and founded by David Rönnlid, web
+            developer (mainly front-end) & entrepreneur. My vision is no less
+            than a world where people are experiencing more well-being. I try to
+            boost love and reduce suffering by accruing power to influence
+            reality, including the society within which the people who can
+            experience more or less valuably exist. This company & coding is a
+            means to that end.
           </p>
         </AboutDavid>
-
         <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
-
         <Toggle>
           {({ on, toggle }) => (
             <>
               {on ? (
                 <>
                   <BasicButton onClick={toggle}>
-                    Hide technologies used at the company
+                    HIDE TECHNOLOGIES USED AT THE COMPANY
                   </BasicButton>
                   <TechStack />
                 </>
               ) : (
                 <BasicButton onClick={toggle}>
-                  Show technologies used at the company
+                  SHOW TECHNOLOGIES USED AT THE COMPANY
                 </BasicButton>
               )}
             </>
           )}
         </Toggle>
-        <ValueProposition />
-        <br />
         <FAQ />
       </Layout>
     )

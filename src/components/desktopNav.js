@@ -1,17 +1,43 @@
 import React, { Component } from "react"
 import "../styles/desktopHeader.css"
 import { Link } from "gatsby"
+import IndexMenu from "./indexMenu"
 
 export default class DesktopNav extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      hovering: false,
+    }
+
+    this.onHovering = this.onHovering.bind(this)
+    this.onQuitHovering = this.onQuitHovering.bind(this)
+  }
+
+  onHovering() {
+    this.setState({
+      hovering: true,
+    })
+  }
+  onQuitHovering() {
+    this.setState({
+      hovering: false,
+    })
+  }
+
   render() {
+    const { hovering } = this.state
     return (
       <div className="desktopHeader">
         <ul>
-          <li>
+          <li onMouseOver={this.onHovering} onMouseLeave={this.onQuitHovering}>
             <Link to="/">
               <i title="Home" className="fas fa-home" /> <span>HOME</span>
             </Link>
+            {hovering ? <IndexMenu /> : null}
           </li>
+
           <li className="buyButton">
             <Link to="/buy">
               <i title="Buy" className="fas fa-shopping-cart" />{" "}
