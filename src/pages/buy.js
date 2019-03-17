@@ -16,7 +16,10 @@ export default class Buy extends Component {
     const { location, data } = this.props
     return (
       <Layout location={location} pageTitle="Buy">
-        <SEO title="Buy" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO
+          title="Buy"
+          desciption="Buy a cheap, fast, user-friendly website. The user experience will be the focus of your company's new way of attracting and satisfying customers."
+        />
         <Img fluid={data.file.childImageSharp.fluid} className="handshake" />
         <h2>Method 1: Email your requirements</h2>
         <a href="mailto:david@ronnlidwebsites.com">

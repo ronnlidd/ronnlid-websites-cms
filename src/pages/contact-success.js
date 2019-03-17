@@ -9,7 +9,10 @@ export default class ContactSuccess extends Component {
     const { location } = this.props
     return (
       <Layout location={location} pageTitle="Success!">
-        <SEO title="Success" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO
+          title="Contact Success"
+          description="Successfully contacted Ronnlid Websites regarding opportunity to buy website, feedback or other inquiry."
+        />
         <p>
           You just filled in a form, the contents have been sent to David
           Rönnlid!
