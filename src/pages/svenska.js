@@ -11,7 +11,7 @@ import {
 } from "../components/styledComponents"
 import Skus from "../components/Skus"
 import "../styles/svenska/svenska.css"
-import GoogleMapDavidRonnlid from "../components/googleMapDavidRonnlid"
+// import GoogleMapDavidRonnlid from "../components/googleMapDavidRonnlid"
 
 export default class Svenska extends Component {
   render() {
@@ -37,7 +37,7 @@ export default class Svenska extends Component {
             ut precis hur du vill.
           </h3>
 
-          <GoogleMapDavidRonnlid />
+          {/* <GoogleMapDavidRonnlid /> */}
 
           <h2 className="mindreSmarta">
             Mindre smärta och mer nöje från webbsidan, för både ägaren och
