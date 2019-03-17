@@ -38,7 +38,7 @@ export default class Buy extends Component {
         >
           <p>
             <label>
-              Your Name:{" "}
+              Your Name: <br />
               <input
                 type="text"
                 name="name"
@@ -48,7 +48,7 @@ export default class Buy extends Component {
           </p>
           <p>
             <label>
-              Your Email:{" "}
+              Your Email: <br />
               <input
                 type="email"
                 name="email"
@@ -59,7 +59,7 @@ export default class Buy extends Component {
           </p>
           <p>
             <label />
-            Message:{" "}
+            Message: <br />
             <textarea
               name="message"
               required
