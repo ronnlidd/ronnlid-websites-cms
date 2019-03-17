@@ -42,11 +42,24 @@ export default class IndexPage extends Component {
   render() {
     const { location } = this.props
     return (
-      <Layout location={location} pageTitle="Value Proposition">
+      <Layout location={location}>
+        <SEO
+          title="About"
+          description="The user experience is the most important factor for your company's long-term success. With the insight that experience is the ultimate source of value, Ronnlid Website boosts the UX of your website to the max and leaves you with a good feeling too."
+          keywords={[
+            "Home",
+            "Value Proposition",
+            "About",
+            "Ronnlid Websites",
+            "FAQ",
+          ]}
+        />
+        <br />
         <Link to="/svenska">
           <BasicButton>Gå till Svenska (Swedish Info for locals)</BasicButton>
         </Link>
 
+        <h1>Value Proposition</h1>
         <ValueProposition />
         <br />
         <h1>About Ronnlid Websites</h1>

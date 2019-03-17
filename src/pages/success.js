@@ -1,10 +1,16 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 export class Success extends Component {
   render() {
     return (
       <Layout pageTitle="Successfully bought a fixed cost package">
+        <SEO
+          title="Purchase succesful"
+          description="You successfully bought a fixed cost package via Ronnlid Websites. Thanks and congratulations!"
+          keywords={[`Buy`, `Purchase`, `Inquiries`]}
+        />
         <h3>Thanks and congratulations. Happy to be in business with you.</h3>
         <p>
           I will reach out to the email you used when purchasing the package

@@ -71,7 +71,7 @@ const Layout = ({ children, pageTitle, location }) => (
               width: "45vw",
               position: "absolute",
               transform: "rotate(-120deg)",
-              top: "-1vw",
+              top: "0vw",
               left: "1vw",
             }}
           />

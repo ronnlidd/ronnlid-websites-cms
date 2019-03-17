@@ -17,7 +17,12 @@ export default class Svenska extends Component {
     const { location, data } = this.props
     return (
       <Layout location={location} pageTitle="Svenska">
-        <SEO title="Buy" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO
+          title="Köp billig, väldesignad, special-anpassad, högpresterande hemsida via Svenska Ronnlid Websites"
+          description="Denna sida är för svenska köpare, främst småföretag som t.ex. pizzeria, bloggare eller frisör. Här kan du läsa om varför du ska välja Ronnlid Website, och ta det första steget till att få din helt egna hemsida."
+          lang="sv"
+          keywords={["Svenska", "Köp", "Hemsida"]}
+        />
         <div>
           <h3>På en kort tid bygger jag en ...</h3>
           <ul className="saljande">
@@ -43,7 +48,6 @@ export default class Svenska extends Component {
         </a>
         <br />
         <br />
-
         <h2>Metod 1: Mejla dina krav</h2>
         <NetlifyForm
           name="contact"
@@ -96,7 +100,6 @@ export default class Svenska extends Component {
         <br />
         <br />
         <h2>Metod 3: Välj ett fastpris-paket</h2>
-
         <h4>
           I nästa steg, välj en e-postadress som du kan använda för att läsa och
           skicka mejl.

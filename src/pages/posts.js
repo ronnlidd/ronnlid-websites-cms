@@ -8,7 +8,10 @@ import "../styles/blog.css"
 
 const Posts = ({ data, location }) => (
   <Layout location={location} pageTitle="Blog Posts">
-    <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Blog posts"
+      desciprtion="Browse the various front-end coding topics & articles that are featured on the Ronnlid Websites blog!"
+    />
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <PostListing key={node.id} post={node} />
     ))}

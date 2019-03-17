@@ -46,6 +46,7 @@ export default class Footer extends React.Component {
             href="https://www.yelp.se/biz/david-r%C3%B6nnlid-stockholm"
             target="_blank"
             rel="noopener noreferrer"
+            title="Yelp"
           >
             <i className="fab fa-yelp fa-2x" />
           </a>
@@ -53,6 +54,7 @@ export default class Footer extends React.Component {
             href="https://www.facebook.com/RonnlidWebsites"
             target="_blank"
             rel="noopener noreferrer"
+            title="Facebook"
           >
             <i className="fab fa-facebook fa-2x" />
           </a>
@@ -60,6 +62,7 @@ export default class Footer extends React.Component {
             href="https://twitter.com/RonnlidW"
             target="_blank"
             rel="noopener noreferrer"
+            title="Twitter"
           >
             <i className="fab fa-twitter fa-2x" />
           </a>
@@ -67,6 +70,7 @@ export default class Footer extends React.Component {
             href="https://www.linkedin.com/company/ronnlidwebsites"
             target="_blank"
             rel="noopener noreferrer"
+            title="LinkedIn"
           >
             <i className="fab fa-linkedin fa-2x" />
           </a>
@@ -74,6 +78,7 @@ export default class Footer extends React.Component {
             href="mailto:david@ronnlidwebsites.com"
             rel="noopener noreferrer"
             target="_blank"
+            title="E-mail"
           >
             <i className="fas fa-envelope fa-2x" />
           </a>

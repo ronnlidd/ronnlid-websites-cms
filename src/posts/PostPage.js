@@ -12,7 +12,10 @@ export class PostPage extends Component {
     const { data, location } = this.props
     return (
       <Layout location={location}>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO
+          title={data.markdownRemark.frontmatter.title}
+          description="Learning to code? This post is only one of the vast array of front-end coding topics that are covered on the Ronnlid Websites blog, from the general to the specific."
+        />
         <Link to="/posts">
           <BasicButton>
             GO BACK TO <i>BLOG POSTS</i>
