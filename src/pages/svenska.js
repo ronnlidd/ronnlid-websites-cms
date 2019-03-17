@@ -11,6 +11,7 @@ import {
 } from "../components/styledComponents"
 import Skus from "../components/Skus"
 import "../styles/svenska/svenska.css"
+import GoogleMapDavidRonnlid from "../components/googleMapDavidRonnlid"
 
 export default class Svenska extends Component {
   render() {
@@ -35,6 +36,9 @@ export default class Svenska extends Component {
             ... hemsida till ditt företag. Hemsidan kan anpassas så att den ser
             ut precis hur du vill.
           </h3>
+
+          <GoogleMapDavidRonnlid />
+
           <h2 className="mindreSmarta">
             Mindre smärta och mer nöje från webbsidan, för både ägaren och
             slut-användaren.

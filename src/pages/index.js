@@ -52,6 +52,7 @@ export default class IndexPage extends Component {
             "About",
             "Ronnlid Websites",
             "FAQ",
+            "Stockholm",
           ]}
         />
         <br />
@@ -78,13 +79,13 @@ export default class IndexPage extends Component {
             <BasicButton>DAVID RÖNNLID ON LINKEDIN</BasicButton>
           </a>
           <p>
-            Ronnlid Websites is owned and founded by David Rönnlid, web
-            developer (mainly front-end) & entrepreneur. My vision is no less
-            than a world where people are experiencing more well-being. I try to
-            boost love and reduce suffering by accruing power to influence
-            reality, including the society within which the people who can
-            experience more or less valuably exist. This company & coding is a
-            means to that end.
+            Ronnlid Websites is based in Stockholm. It is owned and founded by
+            David Rönnlid, web developer (mainly front-end) & entrepreneur. My
+            vision is no less than a world where people are experiencing more
+            well-being. I try to boost love and reduce suffering by accruing
+            power to influence reality, including the society within which the
+            people who can experience more or less valuably exist. This company
+            & coding is a means to that end.
           </p>
         </AboutDavid>
         <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
@@ -127,3 +128,11 @@ export const query = graphql`
     }
   }
 `
+
+// businesscards: file(relativePath: regex: "/bussinesscards/"}) {
+//   childImageSharp {
+//     fluid(maxWidth: 1000) {
+//       ...GatsyImageSharpFluid_tracedSVG
+//     }
+//   }
+// }
