@@ -52,7 +52,7 @@ export default class Svenska extends Component {
         </a>
         <br />
         <br />
-        <h2>Metod 1: Mejla dina krav</h2>
+        <h2>Metod 2: Mejla dina krav</h2>
         <NetlifyForm
           name="contact"
           method="POST"
@@ -62,7 +62,7 @@ export default class Svenska extends Component {
         >
           <p>
             <label>
-              Ditt namn:{" "}
+              Ditt namn: <br />
               <input
                 type="text"
                 name="name"
@@ -72,7 +72,7 @@ export default class Svenska extends Component {
           </p>
           <p>
             <label>
-              Din e-postadress:{" "}
+              Din e-postadress: <br />
               <input
                 type="email"
                 name="email"
@@ -83,7 +83,7 @@ export default class Svenska extends Component {
           </p>
           <p>
             <label />
-            Meddelande:{" "}
+            Meddelande: <br />
             <textarea
               name="message"
               required

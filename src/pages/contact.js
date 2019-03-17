@@ -30,7 +30,7 @@ const Contact = ({ data, location }) => (
     >
       <p>
         <label>
-          Your Name:{" "}
+          Your Name: <br />
           <input
             type="text"
             name="name"
@@ -41,7 +41,7 @@ const Contact = ({ data, location }) => (
       </p>
       <p>
         <label>
-          Your Email:{" "}
+          Your Email: <br />
           <input
             type="email"
             name="email"
@@ -52,7 +52,7 @@ const Contact = ({ data, location }) => (
       </p>
       <p>
         <label />
-        Message:{" "}
+        Message: <br />
         <textarea
           name="message"
           placeholder="Write your question or input here."
