@@ -14,16 +14,23 @@ class GoogleMapDavidRonnlid extends Component {
 
   render() {
     return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: "100vh", width: "100%", overflowX: "scroll" }}>
+      <div
+        style={{
+          height: "400px",
+          width: "100%",
+          overflowX: "scroll",
+          margin: "1rem auto",
+          borderRadius: "1rem",
+        }}
+      >
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyD1DlysJyJDaLPxP7ZnSJJ3kF83BvgkU9s" }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
           <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
+            lat={59.32955}
+            lng={18.04477}
             text={"Ronnlid Websites"}
           />
         </GoogleMapReact>
