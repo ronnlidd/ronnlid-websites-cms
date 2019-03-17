@@ -42,7 +42,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-filesystem`, //Remove because of duplication? ^^
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
