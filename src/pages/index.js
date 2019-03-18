@@ -129,10 +129,10 @@ export const query = graphql`
   }
 `
 
-// businesscards: file(relativePath: regex: "/bussinesscards/"}) {
+// businesscards: file(relativePath: regex: "/businesscards/"}) {
 //   childImageSharp {
 //     fluid(maxWidth: 1000) {
-//       ...GatsyImageSharpFluid_tracedSVG
+//       ...GatsbyImageSharpFluid
 //     }
 //   }
 // }

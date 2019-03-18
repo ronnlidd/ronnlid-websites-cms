@@ -1,15 +1,31 @@
 import React, { Component } from "react"
 import GoogleMapReact from "google-map-react"
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>
+const AnyReactComponent = ({ text }) => (
+  <div
+    style={{
+      color: "white",
+      background: "grey",
+      padding: "15px 10px",
+      display: "inline-flex",
+      textAlign: "center",
+      alignItems: "center",
+      justifyContent: "center",
+      borderRadius: "100%",
+      transform: "translate(-50%, -50%)",
+    }}
+  >
+    {text}
+  </div>
+)
 
 class GoogleMapDavidRonnlid extends Component {
   static defaultProps = {
     center: {
-      lat: 59.32,
+      lat: 59.33,
       lng: 18.04,
     },
-    zoom: 11,
+    zoom: 10,
   }
 
   render() {
