@@ -37,12 +37,12 @@ export default class Svenska extends Component {
             ut precis hur du vill.
           </h3>
 
-          <GoogleMapDavidRonnlid />
-
           <h2 className="mindreSmarta">
             Mindre smärta och mer nöje från webbsidan, för både ägaren och
             slut-användaren.
           </h2>
+
+          <GoogleMapDavidRonnlid />
         </div>
         <h1>Köp</h1>
         <Img fluid={data.file.childImageSharp.fluid} className="handshake" />
