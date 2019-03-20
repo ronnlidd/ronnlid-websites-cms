@@ -2,7 +2,8 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 import { NetlifyForm } from "../components/styledComponents"
 import { BasicButton } from "../components/styledComponents"
 
@@ -70,7 +71,31 @@ const Contact = ({ data, location }) => (
         </BasicButton>
       </p>
     </NetlifyForm>
+    <Img
+      fluid={data.rwcards.childImageSharp.fluid}
+      alt="Ronnlid Websites business cards."
+      style={{
+        margin: "1rem auto",
+        borderRadius: "1rem",
+        border: "1px solid white",
+        width: "70vw",
+        minWidth: "200px",
+        overflowX: "hidden",
+      }}
+    />
   </Layout>
 )
+
+export const query = graphql`
+  query rwCard {
+    rwcards: file(relativePath: { regex: "/rwcards/" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default Contact
