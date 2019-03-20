@@ -8,7 +8,7 @@ import styled from "styled-components"
 import { BasicButton } from "../components/styledComponents"
 import FAQ from "../components/fAQ"
 import ValueProposition from "../components/valueProposition"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 const AboutDavid = styled.div`
   border: 1px solid #fff;
@@ -38,9 +38,20 @@ const AboutDavid = styled.div`
   }
 `
 
+const FeaturesImg = styled.div`
+  display: none;
+
+  @media screen and (min-width: 750px) {
+    border-radius: 1rem;
+    border: 1px solid white;
+    display: block;
+    margin: 1.5rem auto 1rem auto;
+  }
+`
+
 export default class IndexPage extends Component {
   render() {
-    const { location } = this.props
+    const { location, data } = this.props
     return (
       <Layout location={location}>
         <SEO
@@ -63,11 +74,12 @@ export default class IndexPage extends Component {
         <h1>Value Proposition</h1>
         <ValueProposition />
         <br />
+
         <h1>About Ronnlid Websites</h1>
         <h2>Company selling website solutions.</h2>
         <AboutDavid className="aboutDavid" id="about">
           <Img
-            fluid={this.props.data.file.childImageSharp.fluid}
+            fluid={data.file.childImageSharp.fluid}
             style={{ borderRadius: "60%", width: "40%", margin: "0 auto" }}
             alt="David Rönnlid"
           />
@@ -88,7 +100,18 @@ export default class IndexPage extends Component {
             & coding is a means to that end.
           </p>
         </AboutDavid>
-        <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
+
+        <FeaturesImg>
+          <Img
+            fluid={data.features.childImageSharp.fluid}
+            alt="Some features available for your website via Ronnlid Websites."
+            style={{ borderRadius: "1rem", border: "1px solid white" }}
+          />
+          <p style={{ textAlign: "center", margin: "1rem auto" }}>
+            Some features available for your website via Ronnlid Websites.
+          </p>
+        </FeaturesImg>
+
         <Toggle>
           {({ on, toggle }) => (
             <>
@@ -126,13 +149,12 @@ export const query = graphql`
         }
       }
     }
+    features: file(relativePath: { regex: "/featuresInfoGraphic/" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
   }
 `
-
-// businesscards: file(relativePath: regex: "/businesscards/"}) {
-//   childImageSharp {
-//     fluid(maxWidth: 1000) {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }

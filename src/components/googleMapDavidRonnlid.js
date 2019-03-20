@@ -35,8 +35,8 @@ class GoogleMapDavidRonnlid extends Component {
         <h1>Plats</h1>
         <h2>
           Ronnlid Websites är ett svenskt företag, om du bor i Stockholm kan vi
-          ha ett personligt möte på plats av ditt val. Här befinner företaget
-          sig. Självklart går det att sköta all kontakt digitalt.
+          ha ett personligt möte på plats av ditt val. Här finns företaget.
+          Självklart går det att sköta all kontakt digitalt.
         </h2>
         <div
           style={{
