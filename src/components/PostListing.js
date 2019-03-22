@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 const PostListing = ({ post }) => (
-  <article className="postExcerpt">
+  <article className="postExcerpt" style={{ marginBottom: "1rem" }}>
     <h3>
       <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
     </h3>
