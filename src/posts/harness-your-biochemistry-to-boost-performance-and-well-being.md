@@ -16,3 +16,5 @@ There has been many scientific papers published, so many that mentioning one wou
 Personally I find that my ability to be mindful is highly dependent on what I've exposed my body and mind to in the short- to medium-term. Sources of exposures could be substances such as sugar, nootropics or alchohol, but also inside-out exposures such as exercise, social interaction, sleep and mindfulness itself. These are easier to get right the longer you practice them, as you accrue power over time to proactively, deliberately say no to the ego and say yes to what is fulfilling for you and your longer-term purpose. 
 
 There are risks to any biochemical manipulation, but there are also rewards, following the nature-compatible heuristic of anti-fragility (Nassim Nicholas Taleb, [On Amazon](https://www.amazon.com/Antifragile-Things-That-Disorder-Incerto/dp/0812979680)) has helped me a lot for avoiding the lows and always experiencing well-being and productivity. When you get it right, the habitual neuronal activation of mindful experiences are truly beautiful and useful.
+
+Written by David Rönnlid
