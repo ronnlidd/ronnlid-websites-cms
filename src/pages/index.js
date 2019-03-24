@@ -9,7 +9,6 @@ import { BasicButton } from "../components/styledComponents"
 import FAQ from "../components/fAQ"
 import ValueProposition from "../components/valueProposition"
 import { Link, graphql } from "gatsby"
-// import LogoVideo from "../components/logoVideo"
 
 const AboutDavid = styled.div`
   border: 1px solid #fff;
@@ -78,7 +77,6 @@ export default class IndexPage extends Component {
 
         <h1>About Ronnlid Websites</h1>
         <h2>Company selling website solutions.</h2>
-        {/* <LogoVideo /> */}
         <AboutDavid className="aboutDavid" id="about">
           <Img
             fluid={data.file.childImageSharp.fluid}
