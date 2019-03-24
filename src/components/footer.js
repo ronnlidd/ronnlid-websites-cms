@@ -4,6 +4,7 @@ import Helmet from "react-helmet"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import NewsletterSignup from "../components/newsletterSignup"
+import { Link } from "gatsby"
 
 const RonnlidWebsitesCopyright = styled.div`
   display: flex;
@@ -95,6 +96,18 @@ export default class Footer extends React.Component {
             &copy; {this.state.year}, Ronnlid Websites, David Rönnlid
           </p>
         </RonnlidWebsitesCopyright>
+        <Link
+          to="/privacy-policy"
+          style={{ color: "white", marginLeft: "10vw" }}
+        >
+          Privacy Policy
+        </Link>
+        <Link
+          to="/terms-of-service"
+          style={{ color: "white", marginLeft: "1rem" }}
+        >
+          Terms of service
+        </Link>
         <NewsletterSignup />
       </footer>
     )

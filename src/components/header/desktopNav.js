@@ -56,13 +56,13 @@ export default class DesktopNav extends Component {
                 </li>
                 <li>
                   <BasicButton onClick={toggle} style={{ marginLeft: "5px" }}>
-                    Close
+                    CLOSE
                   </BasicButton>
                 </li>
               </ul>
             ) : (
               <BasicButton onClick={toggle} className="openButton">
-                Open
+                OPEN
               </BasicButton>
             )
           }
