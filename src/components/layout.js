@@ -21,7 +21,7 @@ const ImgRemoverOnSmallScreen = styled.div`
   }
 `
 
-const Layout = ({ children, pageTitle, location }) => (
+const Layout = ({ children, pageTitle, location, indexPage = false }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -56,13 +56,12 @@ const Layout = ({ children, pageTitle, location }) => (
             src="https://www.googletagmanager.com/gtag/js?id=UA-132982458-1"
           />
         </Helmet>
-
         <Header
           siteTitle={data.site.siteMetadata.title}
           logo={data.file.childImageSharp.fluid}
           location={location}
+          indexPage={indexPage}
         />
-
         <ImgRemoverOnSmallScreen>
           <Img
             fluid={data.desktopBackground.childImageSharp.fluid}
@@ -88,7 +87,6 @@ const Layout = ({ children, pageTitle, location }) => (
             }}
           />
         </ImgRemoverOnSmallScreen>
-
         <main style={{ width: "85vw", margin: "2.5rem auto 1rem auto" }}>
           <h1>{pageTitle}</h1>
           {children}

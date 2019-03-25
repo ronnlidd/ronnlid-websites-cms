@@ -53,7 +53,7 @@ export default class IndexPage extends Component {
   render() {
     const { location, data } = this.props
     return (
-      <Layout location={location}>
+      <Layout location={location} indexPage={true}>
         <SEO
           title="About"
           description="The user experience is the most important factor for your company's long-term success. With the insight that experience is the ultimate source of value, Ronnlid Website boosts the UX of your website to the max and leaves you with a good feeling too."
@@ -68,9 +68,8 @@ export default class IndexPage extends Component {
         />
         <br />
         <Link to="/svenska">
-          <BasicButton>Gå till Svenska (Swedish Info for locals)</BasicButton>
+          <BasicButton>GÅ TILL SVENSKA (SWEDISH INFO FOR LOCALS)</BasicButton>
         </Link>
-
         <h1>Value Proposition</h1>
         <ValueProposition />
         <br />
