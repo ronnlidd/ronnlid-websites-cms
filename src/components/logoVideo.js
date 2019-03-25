@@ -19,13 +19,31 @@ export class LogoVideo extends Component {
     })
   }
 
+  componentDidMount() {
+    if (window.innerWidth > 800) {
+      this.setState({
+        displayVideoState: true,
+      })
+    } else {
+      this.setState({
+        displayVideoState: false,
+      })
+    }
+  }
+
   render() {
     const { displayVideoState } = this.state
     const { logo } = this.props
     return (
       <>
         {displayVideoState ? (
-          <video autoPlay muted onEnded={this.handleVideoEnd} width="100%">
+          <video
+            autoPlay
+            muted
+            onEnded={this.handleVideoEnd}
+            width="100%"
+            id="logoVideo"
+          >
             <source src={myVideo} type="video/mp4" />
             <p>Video logo could not load.</p>
           </video>
