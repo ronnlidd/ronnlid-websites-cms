@@ -1,9 +1,11 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
 import Helmet from "react-helmet"
 import DesktopNav from "./desktopNav"
 import MobileNav from "./mobileNav"
+import LogoVideo from "../logoVideo"
+import Logo from "../logo"
+
 const HeaderContainer = styled.div`
   margin: 1rem auto;
   padding: 0.85rem 0;
@@ -24,13 +26,24 @@ const HeaderContainer = styled.div`
     & .ronnlidWebsitesLogo {
       width: 24vw;
       margin: 0 auto;
+      height: auto;
+      animation: slideInFromLeft 0.3s ease 1 alternate;
+    }
+
+    @keyframes slideInFromLeft {
+      from {
+        transform: translateX(-100%) scale(9, 9);
+      }
+      to {
+        transform: translateX(0) scale(1, 1);
+      }
     }
   }
 `
 
 export default class Header extends Component {
   render() {
-    const { logo } = this.props
+    const { logo, indexPage } = this.props
 
     return (
       <>
@@ -43,7 +56,7 @@ export default class Header extends Component {
           />
         </Helmet>
         <HeaderContainer>
-          <Img fluid={logo} className="ronnlidWebsitesLogo" />
+          {indexPage ? <LogoVideo logo={logo} /> : <Logo logoImg={logo} />}
           <DesktopNav />
           <MobileNav />
         </HeaderContainer>
