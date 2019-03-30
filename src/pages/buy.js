@@ -8,7 +8,7 @@ import {
   BasicButton,
   NetlifyForm,
   FlexRow,
-} from "../components/styledComponents"
+} from "../components/styledComponents/styledComponents"
 import Skus from "../components/Skus"
 
 export default class Buy extends Component {

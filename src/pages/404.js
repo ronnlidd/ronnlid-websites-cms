@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link } from "gatsby"
-import { BasicButton } from "../components/styledComponents"
+import { BasicButton } from "../components/styledComponents/styledComponents"
 
 const NotFoundPage = location => (
   <Layout location={location} pageTitle="NOT FOUND">

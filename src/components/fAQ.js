@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import { BasicButton } from "./styledComponents"
+import { BasicButton } from "./styledComponents/styledComponents"
 import "../styles/faq.css"
 
 const Question = props => <h4>{props.question}</h4>

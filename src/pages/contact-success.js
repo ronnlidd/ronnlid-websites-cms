@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link } from "gatsby"
-import { BasicButton } from "../components/styledComponents"
+import { BasicButton } from "../components/styledComponents/styledComponents"
 
 export default class ContactSuccess extends Component {
   render() {

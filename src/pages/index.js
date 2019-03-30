@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import TechStack from "../components/techStack"
 import Toggle from "../components/toggle"
 import styled from "styled-components"
-import { BasicButton } from "../components/styledComponents"
+import { BasicButton } from "../components/styledComponents/styledComponents"
 import FAQ from "../components/fAQ"
 import ValueProposition from "../components/valueProposition"
 import { Link, graphql } from "gatsby"
@@ -68,7 +68,7 @@ export default class IndexPage extends Component {
         />
         <br />
         <Link to="/svenska">
-          <BasicButton>GÅ TILL SVENSKA (SWEDISH INFO FOR LOCALS)</BasicButton>
+          <BasicButton>SVENSKA (SWEDISH)</BasicButton>
         </Link>
         <h1>Value Proposition</h1>
         <ValueProposition />

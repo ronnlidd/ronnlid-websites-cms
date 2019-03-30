@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { BasicButton, NetlifyForm } from "./styledComponents"
+import { BasicButton, NetlifyForm } from "./styledComponents/styledComponents"
 import styled from "styled-components"
 
 const NewsletterInput = styled.input`
@@ -44,7 +44,7 @@ export default class NewsletterSignup extends Component {
             border: "1px solid white",
           }}
         >
-          SIGN ME UP!
+          SIGN ME UP
         </BasicButton>
       </NetlifyForm>
     )

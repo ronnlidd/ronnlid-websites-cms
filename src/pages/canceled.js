@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
-import { BasicButton } from "../components/styledComponents"
+import { BasicButton } from "../components/styledComponents/styledComponents"
 import SEO from "../components/seo"
 
 export class Success extends Component {

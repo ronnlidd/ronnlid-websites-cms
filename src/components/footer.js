@@ -89,7 +89,7 @@ export default class Footer extends React.Component {
             fluid={imgSrc}
             style={{
               width: "10vw",
-              marginLeft: ".2rem",
+              marginLeft: "5vw",
             }}
           />
           <p className="copyRightP">
@@ -98,13 +98,21 @@ export default class Footer extends React.Component {
         </RonnlidWebsitesCopyright>
         <Link
           to="/privacy-policy"
-          style={{ color: "white", marginLeft: "10vw" }}
+          style={{
+            color: "white",
+            marginLeft: "5vw",
+            fontFamily: "abel, sans-serif",
+          }}
         >
           Privacy Policy
         </Link>
         <Link
           to="/terms-of-service"
-          style={{ color: "white", marginLeft: "1rem" }}
+          style={{
+            color: "white",
+            marginLeft: "1rem",
+            fontFamily: "abel, sans-serif",
+          }}
         >
           Terms of service
         </Link>

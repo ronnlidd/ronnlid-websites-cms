@@ -1,5 +1,5 @@
 import React from "react"
-import { BasicButton } from "../components/styledComponents"
+import { BasicButton } from "../components/styledComponents/styledComponents"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
