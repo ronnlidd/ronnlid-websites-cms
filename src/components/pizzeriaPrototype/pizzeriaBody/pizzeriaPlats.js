@@ -12,6 +12,7 @@ export default class PizzeriaPlats extends Component {
       <div id="plats">
         <StyledH1>Plats</StyledH1>
         <StyledH2>Här finns vi:</StyledH2>
+        <br />
         <GoogleMapDavidRonnlid pizzeria={true} />
         <br />
         <StyledP>Pipersgatan 4. 112 24. Stockholm.</StyledP>

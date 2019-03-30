@@ -39,7 +39,7 @@ export default class ScrollButton extends Component {
           this.scrollToTop()
         }}
       >
-        <i class="fas fa-arrow-up" />
+        <i className="fas fa-arrow-up" />
       </button>
     )
   }

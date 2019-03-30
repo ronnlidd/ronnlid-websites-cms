@@ -127,6 +127,7 @@ export const StdBtn = styled.button`
 export const StyledLi = styled.li`
   list-style: none;
   max-width: 95%;
+  min-width: 200px;
   padding: 0.5rem;
   background: ${props => props.theme.bgComp};
   border: 1px solid ${props => props.theme.fg};
