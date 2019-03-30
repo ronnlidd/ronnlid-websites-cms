@@ -11,6 +11,7 @@ export const BasicButton = styled.button`
   border-radius: 1rem;
   text-decoration: none;
   color: #0b132b;
+  transition: color 0.4s, background 0.4s;
 
   & :hover {
     cursor: pointer;
@@ -113,6 +114,7 @@ export const StdBtn = styled.button`
   padding: 0.5rem;
   border-radius: 1rem;
   box-shadow: 0 2px 2px ${props => props.theme.fg};
+  transition: color 0.4s, background 0.4s;
 
   :hover {
     background: ${props => props.theme.fg};
@@ -133,43 +135,23 @@ export const StyledLi = styled.li`
 `
 export const StyledImg = styled.div`
   width: 80%;
-  position: relative;
   max-width: 600px;
   margin: 1rem auto;
+  overflow: hidden;
 
   img {
     border-radius: 2rem;
     display: block;
-  }
-
-  .overlay {
-    display: block;
-    position: absolute;
-    height: 0;
-    opacity: 0;
-    right: 0;
-    transition: height 0.5s;
-  }
-
-  :hover {
-    .overlay {
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-      top: 0;
-      left: 0;
-      background: ${props => props.theme.bgComp};
-      border-radius: 1.9rem;
-    }
   }
 `
 
 export const StyledImgTwo = styled.div`
   width: 50%;
   display: inline-block;
-  max-width: 600px;
+  // max-width: 600px;
   margin: 1rem auto;
   position: relative;
+  overflow: hidden;
   img {
     border-radius: 2rem;
   }
@@ -180,7 +162,7 @@ export const StyledImgTwo = styled.div`
     height: 0;
     opacity: 0;
     right: 0;
-    transition: height 0.5s;
+    transition: opacity 1s;
   }
 
   :hover {
@@ -190,8 +172,13 @@ export const StyledImgTwo = styled.div`
       opacity: 1;
       top: 0;
       left: 0;
-      background: ${props => props.theme.bgComp};
+      background: ${props => props.theme.fgComp};
       border-radius: 1.9rem;
     }
   }
+`
+
+export const RonnlidWebsitesCopyright = styled.div`
+  display: flex;
+  align-items: center;
 `

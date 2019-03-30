@@ -2,14 +2,9 @@ import React from "react"
 import "../styles/footer.css"
 import Helmet from "react-helmet"
 import Img from "gatsby-image"
-import styled from "styled-components"
+import { RonnlidWebsitesCopyright } from "./styledComponents/styledComponents"
 import NewsletterSignup from "../components/newsletterSignup"
 import { Link } from "gatsby"
-
-const RonnlidWebsitesCopyright = styled.div`
-  display: flex;
-  align-items: center;
-`
 
 export default class Footer extends React.Component {
   constructor() {

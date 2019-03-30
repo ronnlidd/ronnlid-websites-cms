@@ -56,7 +56,7 @@ export class ValueProposition extends Component {
     const { showTime, showMoney, showCustomers } = this.state
     return (
       <div className="valueProposition" id="value-proposition">
-        <h3>
+        <h3 className="elevPitch">
           Reducing the pain and increasing the joy of using a website, for
           owners and customers.
         </h3>
@@ -84,7 +84,6 @@ export class ValueProposition extends Component {
             from={{ opacity: 0, marginTop: 400 }}
             enter={{ opacity: 1, marginTop: 0 }}
             leave={{ opacity: 0, marginTop: 0 }}
-            config={{ duration: 300 }}
           >
             {showTime =>
               showTime &&
@@ -129,7 +128,6 @@ export class ValueProposition extends Component {
             from={{ opacity: 0, marginTop: 400 }}
             enter={{ opacity: 1, marginTop: 0 }}
             leave={{ opacity: 0, marginTop: 0 }}
-            config={{ duration: 300 }}
           >
             {showMoney =>
               showMoney &&
@@ -180,7 +178,6 @@ export class ValueProposition extends Component {
             from={{ opacity: 0, marginTop: 400 }}
             enter={{ opacity: 1, marginTop: 0 }}
             leave={{ opacity: 0, marginTop: 0 }}
-            config={{ duration: 300 }}
           >
             {showCustomers =>
               showCustomers &&

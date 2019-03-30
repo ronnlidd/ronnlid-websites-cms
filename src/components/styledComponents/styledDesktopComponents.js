@@ -21,6 +21,7 @@ export const DesktopUl = styled.ul`
   a {
     text-decoration: none;
     color: ${props => props.theme.fg};
+    font-family: sans-serif;
     :hover {
       cursor: pointer;
       color: ${props => props.theme.bgComp};
@@ -31,7 +32,6 @@ export const DesktopLi = styled.li`
   padding: 1rem 3rem;
   transition: border-bottom 0.6s, box-shadow 0.6s, background 0.6s,
     border-bottom-left-radius 0.6s, border-bottom-right-radius 0.6s, color 0.6s;
-
   :hover {
     cursor: pointer;
     background: ${props => props.theme.fg};

@@ -17,6 +17,7 @@ import PizzaImgThree from "./pizzaImgs/pizzaThree"
 
 export default class PizzeriaMeny extends Component {
   render() {
+    const { bigScreen } = this.props
     return (
       <div id="meny">
         <StyledH1>Meny</StyledH1>
@@ -51,16 +52,6 @@ export default class PizzeriaMeny extends Component {
         </FlexRow>
         <StyledImg>
           <PizzaImgOne />
-          <div className="overlay">
-            <br />
-            <br />
-
-            <PizzeriaMenyInstans
-              name="Exempelrätt"
-              price="100"
-              ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
-            />
-          </div>
         </StyledImg>
         <StyledH2>Inbakade pizzor:</StyledH2>
         <FlexRow style={{ margin: "0 auto 0 -3rem" }}>
@@ -150,60 +141,20 @@ export default class PizzeriaMeny extends Component {
         <StyledH2>Drycker:</StyledH2>
 
         <FlexRow style={{ margin: "0 auto 0 -3rem" }}>
-          <PizzeriaMenyInstans
-            name="Exempelrätt"
-            price="100"
-            ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
-          />
-          <PizzeriaMenyInstans
-            name="Exempelrätt"
-            price="100"
-            ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
-          />
-          <PizzeriaMenyInstans
-            name="Exempelrätt"
-            price="100"
-            ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
-          />
-          <PizzeriaMenyInstans
-            name="Exempelrätt"
-            price="100"
-            ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
-          />
-          <PizzeriaMenyInstans
-            name="Exempelrätt"
-            price="100"
-            ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
-          />
+          <PizzeriaMenyInstans name="Exempeldryck" price="10" />
+          <PizzeriaMenyInstans name="Exempeldryck" price="10" />
+          <PizzeriaMenyInstans name="Exempeldryck" price="10" />
+          <PizzeriaMenyInstans name="Exempeldryck" price="10" />
+          <PizzeriaMenyInstans name="Exempeldryck" price="10" />
         </FlexRow>
         <StyledH2>Tillbehör:</StyledH2>
 
         <FlexRow style={{ margin: "0 auto 0 -3rem" }}>
-          <PizzeriaMenyInstans
-            name="Exempelrätt"
-            price="100"
-            ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
-          />
-          <PizzeriaMenyInstans
-            name="Exempelrätt"
-            price="100"
-            ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
-          />
-          <PizzeriaMenyInstans
-            name="Exempelrätt"
-            price="100"
-            ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
-          />
-          <PizzeriaMenyInstans
-            name="Exempelrätt"
-            price="100"
-            ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
-          />
-          <PizzeriaMenyInstans
-            name="Exempelrätt"
-            price="100"
-            ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
-          />
+          <PizzeriaMenyInstans name="Exempeltillbehör" price="15" />
+          <PizzeriaMenyInstans name="Exempeltillbehör" price="15" />
+          <PizzeriaMenyInstans name="Exempeltillbehör" price="15" />
+          <PizzeriaMenyInstans name="Exempeltillbehör" price="15" />
+          <PizzeriaMenyInstans name="Exempeltillbehör" price="15" />
         </FlexRow>
         <StyledH2>Alternativ:</StyledH2>
         <ul>
@@ -232,33 +183,45 @@ export default class PizzeriaMeny extends Component {
             Familjepizza (+115kr)
           </StyledLi>
         </ul>
-        <StyledP>Det går även att ta bort ingredienser.</StyledP>
-        <StyledImgTwo>
-          <PizzaImgTwo />
-          <div className="overlay">
-            <br />
-            <br />
+        <StyledP style={{ marginRight: "10px" }}>
+          Det går även att ta bort ingredienser.
+        </StyledP>
+        {bigScreen ? (
+          <>
+            <StyledImgTwo>
+              <PizzaImgTwo />
+              <div className="overlay">
+                <br />
+                <br />
 
-            <PizzeriaMenyInstans
-              name="Exempelrätt"
-              price="100"
-              ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
-            />
-          </div>
-        </StyledImgTwo>
-        <StyledImgTwo>
-          <PizzaImgThree />
-          <div className="overlay">
-            <br />
-            <br />
+                <PizzeriaMenyInstans
+                  name="Exempelrätt"
+                  price="100"
+                  ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
+                />
+              </div>
+            </StyledImgTwo>
+            <StyledImgTwo>
+              <PizzaImgThree />
+              <div className="overlay">
+                <br />
+                <br />
 
-            <PizzeriaMenyInstans
-              name="Exempelrätt"
-              price="100"
-              ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
-            />
-          </div>
-        </StyledImgTwo>
+                <PizzeriaMenyInstans
+                  name="Exempelrätt"
+                  price="100"
+                  ingredients={["Ingrediens 1", "Ingrediens 2", "Ingrediens 3"]}
+                />
+              </div>
+            </StyledImgTwo>
+          </>
+        ) : (
+          <>
+            <StyledImg>
+              <PizzaImgThree />
+            </StyledImg>
+          </>
+        )}
       </div>
     )
   }

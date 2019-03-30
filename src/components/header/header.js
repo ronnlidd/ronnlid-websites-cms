@@ -7,14 +7,14 @@ import Logo from "../logo"
 import { Spring } from "react-spring/renderprops"
 
 const HeaderContainer = styled.div`
-  margin: 1rem auto;
+  margin: 0 auto -4.5rem auto;
   padding: 0.85rem 0;
   z-index: 2;
   position: relative;
 
   .ronnlidWebsitesLogo {
     width: 220px;
-    margin-left: 1rem;
+    margin: 0 auto;
   }
   @media screen and (min-width: 1000px) {
     margin: 0 auto;
@@ -46,7 +46,6 @@ export default class Header extends Component {
       <Spring
         from={{ opacity: 0, marginTop: -200 }}
         to={{ opacity: 1, marginTop: 0 }}
-        config={{ duration: 200, delay: 200 }}
       >
         {props => (
           <div style={props}>

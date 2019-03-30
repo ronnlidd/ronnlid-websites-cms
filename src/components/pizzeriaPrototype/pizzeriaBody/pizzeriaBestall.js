@@ -8,11 +8,14 @@ export default class PizzeriaBestall extends Component {
       <div id="bestall">
         <StyledH1>Beställ</StyledH1>
         <StyledH2>Ring:</StyledH2>
-        <a href="tel:0709440037">
-          <StdBtn style={{ marginLeft: "3rem", marginBottom: "1rem" }}>
-            <i className="fas fa-phone" /> 0709-44 00 37
-          </StdBtn>
-        </a>
+        <StdBtn
+          style={{
+            marginLeft: "3rem",
+            marginBottom: "1rem",
+          }}
+        >
+          <i className="fas fa-phone" /> 0709-44 00 xx
+        </StdBtn>
       </div>
     )
   }

@@ -3,12 +3,10 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const IndexPageMenu = styled.ul`
-  transition: height 500ms ease;
   list-style: none;
   border: none;
   background: #3a506b;
   border-radius: 0;
-  // width: 100%;
   margin-left: 0.4rem;
 
   & li {
@@ -16,7 +14,6 @@ export const IndexPageMenu = styled.ul`
     & a {
       text-decoration: none;
       font-family: sans-serif;
-      transition: box-shadow 0.2s;
       color: #fff;
 
       & :hover {

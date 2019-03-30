@@ -8,10 +8,10 @@ import PizzeriaSite from "../components/pizzeriaPrototype/pizzeriaSite"
 import { ThemeProvider } from "styled-components"
 
 const pizzeriaTheme = {
-  fg: "black",
-  bg: "white",
-  fgComp: "#BAA898",
-  bgComp: "#EEE0CB",
+  fg: "#000",
+  bg: "#ACBEA3",
+  fgComp: "#AD5D4E",
+  bgComp: "#EB6534",
 }
 
 const PizzeriaPrototype = location => (
@@ -25,9 +25,12 @@ const PizzeriaPrototype = location => (
     <ThemeProvider theme={pizzeriaTheme}>
       <PizzeriaSite />
     </ThemeProvider>
-    <Link to="/">
+    <Link to="/svenska#fixedCostPackages">
+      <BasicButton>Köp Pizza-hemsida (The basic package)</BasicButton>
+    </Link>
+    <Link to="/svenska">
       <BasicButton>
-        Go to Ronnlid Websites <i>Home</i>
+        Gå till Ronnlid Websites <i>Svenska</i>
       </BasicButton>
     </Link>
   </Layout>

@@ -6,7 +6,7 @@ export const StyledH1 = styled.h1`
 `
 export const StyledH2 = styled.h2`
   color: ${props => props.theme.fg};
-  margin-left: 3rem;
+  margin: 0.3rem auto 0.3rem 3rem;
 `
 
 export const StyledP = styled.p`

@@ -2,11 +2,11 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import PizzeriaHeader from "./pizzeriaHeader/pizzeriaHeader"
 import { PizzeriaBody } from "./pizzeriaBody/pizzeriaBody"
-import PizzeriaFooter from "./pizzeriaFooter"
+import { PizzeriaFooter } from "./pizzeriaFooter/pizzeriaFooter"
 
 const PizzeriaLayoutDiv = styled.div`
   width: 100%;
-  background: white;
+  background: ${props => props.theme.bg};
   margin: 0 auto;
   position: relative;
   border-radius: 0.5rem;
@@ -38,7 +38,7 @@ export class PizzeriaLayout extends Component {
     return (
       <PizzeriaLayoutDiv>
         <PizzeriaHeader bigScreen={bigScreen} />
-        <PizzeriaBody />
+        <PizzeriaBody bigScreen={bigScreen} />
         <PizzeriaFooter />
       </PizzeriaLayoutDiv>
     )

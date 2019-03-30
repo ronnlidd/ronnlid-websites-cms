@@ -33,7 +33,7 @@ class GoogleMapDavidRonnlid extends Component {
     const { pizzeria } = this.props
     return (
       <>
-        <h1>Plats</h1>
+        {pizzeria ? null : <h1>Plats</h1>}
         {pizzeria ? null : (
           <h2>
             Ronnlid Websites är ett svenskt företag, om du bor i Stockholm kan
@@ -46,7 +46,7 @@ class GoogleMapDavidRonnlid extends Component {
             height: "400px",
             width: "100%",
             overflowX: "scroll",
-            margin: "-4rem auto 0 auto",
+            margin: "-1rem auto 0 auto",
             borderRadius: "1rem",
           }}
         >
