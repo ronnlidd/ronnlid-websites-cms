@@ -3,7 +3,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
-import { BasicButton } from "../components/styledComponents"
+import { BasicButton } from "../components/styledComponents/styledComponents"
 import "../styles/fancyButton.css"
 import "../styles/blog.css"
 

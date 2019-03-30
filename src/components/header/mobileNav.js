@@ -26,7 +26,9 @@ ul {
 }
 
 ul {
-    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
     display: flex;
     align-items: flex-start;
     justify-items: flex-start;

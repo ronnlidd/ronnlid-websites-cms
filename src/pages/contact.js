@@ -4,8 +4,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { NetlifyForm } from "../components/styledComponents"
-import { BasicButton } from "../components/styledComponents"
+import {
+  NetlifyForm,
+  BasicButton,
+} from "../components/styledComponents/styledComponents"
 
 const Contact = ({ data, location }) => (
   <Layout location={location} pageTitle="Contact">

@@ -8,10 +8,11 @@ import {
   BasicButton,
   NetlifyForm,
   FlexRow,
-} from "../components/styledComponents"
+} from "../components/styledComponents/styledComponents"
 import Skus from "../components/Skus"
 import "../styles/svenska/svenska.css"
 import GoogleMapDavidRonnlid from "../components/googleMapDavidRonnlid"
+import { Link } from "gatsby"
 
 export default class Svenska extends Component {
   render() {
@@ -25,6 +26,10 @@ export default class Svenska extends Component {
           keywords={["Svenska", "Köp", "Hemsida"]}
         />
         <div>
+          <Link to="/pizzeria-prototyp">
+            <BasicButton>Lokal pizzeria? Se exempelhemsida</BasicButton>
+          </Link>
+
           <h3>På en kort tid bygger jag en ...</h3>
           <ul className="saljande">
             <li>Väl-designad</li>
@@ -42,7 +47,7 @@ export default class Svenska extends Component {
             slut-användaren.
           </h2>
 
-          <GoogleMapDavidRonnlid />
+          <GoogleMapDavidRonnlid pizzeria={false} />
         </div>
         <h1>Köp</h1>
         <Img fluid={data.file.childImageSharp.fluid} className="handshake" />

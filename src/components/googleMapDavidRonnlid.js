@@ -7,12 +7,12 @@ const RonnlidWebsitesPin = ({ text }) => (
       color: "#fff",
       background: "#0b132b",
       border: "1px solid #fff",
-      padding: "15px 10px",
+      padding: "20px 20px",
       display: "inline-flex",
       textAlign: "center",
       alignItems: "center",
       justifyContent: "center",
-      borderRadius: "1rem",
+      borderRadius: "50%",
       transform: "translate(-50%, -50%)",
     }}
   >
@@ -30,20 +30,23 @@ class GoogleMapDavidRonnlid extends Component {
   }
 
   render() {
+    const { pizzeria } = this.props
     return (
       <>
-        <h1>Plats</h1>
-        <h2>
-          Ronnlid Websites är ett svenskt företag, om du bor i Stockholm kan vi
-          ha ett personligt möte på plats av ditt val. Här finns företaget.
-          Självklart går det att sköta all kontakt digitalt.
-        </h2>
+        {pizzeria ? null : <h1>Plats</h1>}
+        {pizzeria ? null : (
+          <h2>
+            Ronnlid Websites är ett svenskt företag, om du bor i Stockholm kan
+            vi ha ett personligt möte på plats av ditt val. Här finns företaget.
+            Självklart går det att sköta all kontakt digitalt.
+          </h2>
+        )}
         <div
           style={{
             height: "400px",
             width: "100%",
             overflowX: "scroll",
-            margin: "1rem auto",
+            margin: "-1rem auto 0 auto",
             borderRadius: "1rem",
           }}
         >

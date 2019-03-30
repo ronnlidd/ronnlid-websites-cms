@@ -1,7 +1,8 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { BasicButton } from "./styledComponents"
+import { BasicButton } from "./styledComponents/styledComponents"
 import "../styles/valueProposition.css"
+import { Transition } from "react-spring/renderprops"
 
 const BasicPitch = styled.div`
   padding: 0.5rem;
@@ -55,7 +56,7 @@ export class ValueProposition extends Component {
     const { showTime, showMoney, showCustomers } = this.state
     return (
       <div className="valueProposition" id="value-proposition">
-        <h3>
+        <h3 className="elevPitch">
           Reducing the pain and increasing the joy of using a website, for
           owners and customers.
         </h3>
@@ -78,113 +79,143 @@ export class ValueProposition extends Component {
           </BasicButton>
         </BasicPitch>
         <div className="valuePropositionCards">
-          {showTime ? (
-            <div className="card">
-              <h2>
-                More <i className="fas fa-stopwatch" />
-              </h2>
-              <h5>
-                Your time is <mark>valuable</mark> because you can use it to
-                experience and accomplish. <br />
-                <br />
-                <strong>I will get you more time by:</strong>
-              </h5>
-              <ul>
-                <li className="firstLi">
-                  <i className="fas fa-check-square" /> Hosting your website on
-                  a server
-                </li>
-                <li>
-                  <i className="fas fa-check-square" /> Creating a domain with
-                  your custom name
-                </li>
-                <li>
-                  <i className="fas fa-check-square" /> Coding your website
-                </li>
-                <li>
-                  <i className="fas fa-check-square" /> Designing your website
-                </li>
-                <li className="lastLi">
-                  <i className="fas fa-check-square" /> Implementing your
-                  website ideas
-                </li>
-              </ul>
-            </div>
-          ) : null}
-
-          {showMoney ? (
-            <div className="card">
-              <h2>
-                More <i className="fas fa-dollar-sign" />
-              </h2>
-              <h5>
-                Your money is <mark>valuable</mark>, because... alright, I don't
-                have to convince you on that one...{" "}
-                <i className="fas fa-smile-wink" />
-                <br />
-                <br />
-                <strong>I will get you more money by:</strong>
-              </h5>
-              <ul>
-                <li className="firstLi">
-                  <i className="fas fa-check-square" /> Reducing website costs
-                  by using modules & components
-                </li>
-                <li>
-                  <i className="fas fa-check-square" /> Providing actionable
-                  data with help from{" "}
-                  <a
-                    href="https://analytics.google.com/analytics/web/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Google Analytics
-                  </a>{" "}
-                </li>
-                <li>
-                  <i className="fas fa-check-square" /> Boosting amount of
-                  customers <i className="fas fa-arrow-right" />
-                </li>
-                <li className="lastLi">
-                  <i className="fas fa-check-square" /> Using principles of
-                  psychology of persuasion in website design
-                </li>
-              </ul>
-            </div>
-          ) : null}
-          {showCustomers ? (
-            <div className="card">
-              <h2>
-                More <i className="fas fa-handshake" />
-              </h2>
-              <h5>
-                Your customers are <mark>valuable</mark>, on top of their
-                inherent value they also provide revenue. Customers, people seek
-                & go to valuable experiences.
-                <br />
-                <br />
-                <strong>I will get you more customers by:</strong>
-              </h5>
-              <ul>
-                <li className="firstLi">
-                  <i className="fas fa-check-square" /> Boosting the UX of your
-                  website
-                </li>
-                <li>
-                  <i className="fas fa-check-square" /> Search Enginge
-                  Optimization
-                </li>
-                <li>
-                  <i className="fas fa-check-square" /> Implementing marketing
-                  strategies
-                </li>
-                <li className="lastLi">
-                  <i className="fas fa-check-square" /> Email subscription list
-                  configurations
-                </li>
-              </ul>
-            </div>
-          ) : null}
+          <Transition
+            items={showTime}
+            from={{ opacity: 0, marginTop: 400 }}
+            enter={{ opacity: 1, marginTop: 0 }}
+            leave={{ opacity: 0, marginTop: 0 }}
+          >
+            {showTime =>
+              showTime &&
+              (props => (
+                <div className="card" style={props}>
+                  <h2>
+                    More <i className="fas fa-stopwatch" />
+                  </h2>
+                  <h5>
+                    Your time is <mark>valuable</mark> because you can use it to
+                    experience and accomplish. <br />
+                    <br />
+                    <strong>I will get you more time by:</strong>
+                  </h5>
+                  <ul>
+                    <li className="firstLi">
+                      <i className="fas fa-check-square" /> Hosting your website
+                      on a server
+                    </li>
+                    <li>
+                      <i className="fas fa-check-square" /> Creating a domain
+                      with your custom name
+                    </li>
+                    <li>
+                      <i className="fas fa-check-square" /> Coding your website
+                    </li>
+                    <li>
+                      <i className="fas fa-check-square" /> Designing your
+                      website
+                    </li>
+                    <li className="lastLi">
+                      <i className="fas fa-check-square" /> Implementing your
+                      website ideas
+                    </li>
+                  </ul>
+                </div>
+              ))
+            }
+          </Transition>
+          <Transition
+            items={showMoney}
+            from={{ opacity: 0, marginTop: 400 }}
+            enter={{ opacity: 1, marginTop: 0 }}
+            leave={{ opacity: 0, marginTop: 0 }}
+          >
+            {showMoney =>
+              showMoney &&
+              (props => (
+                <div className="card" style={props}>
+                  <h2>
+                    More <i className="fas fa-dollar-sign" />
+                  </h2>
+                  <h5>
+                    Your money is <mark>valuable</mark>, because... alright, I
+                    don't have to convince you on that one...{" "}
+                    <i className="fas fa-smile-wink" />
+                    <br />
+                    <br />
+                    <strong>I will get you more money by:</strong>
+                  </h5>
+                  <ul>
+                    <li className="firstLi">
+                      <i className="fas fa-check-square" /> Reducing website
+                      costs by using modules & components
+                    </li>
+                    <li>
+                      <i className="fas fa-check-square" /> Providing actionable
+                      data with help from{" "}
+                      <a
+                        href="https://analytics.google.com/analytics/web/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Google Analytics
+                      </a>{" "}
+                    </li>
+                    <li>
+                      <i className="fas fa-check-square" /> Boosting amount of
+                      customers <i className="fas fa-arrow-right" />
+                    </li>
+                    <li className="lastLi">
+                      <i className="fas fa-check-square" /> Using principles of
+                      psychology of persuasion in website design
+                    </li>
+                  </ul>
+                </div>
+              ))
+            }
+          </Transition>
+          <Transition
+            items={showCustomers}
+            from={{ opacity: 0, marginTop: 400 }}
+            enter={{ opacity: 1, marginTop: 0 }}
+            leave={{ opacity: 0, marginTop: 0 }}
+          >
+            {showCustomers =>
+              showCustomers &&
+              (props => (
+                <div className="card" style={props}>
+                  <h2>
+                    More <i className="fas fa-handshake" />
+                  </h2>
+                  <h5>
+                    Your customers are <mark>valuable</mark>, on top of their
+                    inherent value they also provide revenue. Customers, people
+                    seek & go to valuable experiences.
+                    <br />
+                    <br />
+                    <strong>I will get you more customers by:</strong>
+                  </h5>
+                  <ul>
+                    <li className="firstLi">
+                      <i className="fas fa-check-square" /> Boosting the UX of
+                      your website
+                    </li>
+                    <li>
+                      <i className="fas fa-check-square" /> Search Enginge
+                      Optimization
+                    </li>
+                    <li>
+                      <i className="fas fa-check-square" /> Implementing
+                      marketing strategies
+                    </li>
+                    <li className="lastLi">
+                      <i className="fas fa-check-square" /> Email subscription
+                      list configurations
+                    </li>
+                  </ul>
+                </div>
+              ))
+            }
+          </Transition>
         </div>
       </div>
     )

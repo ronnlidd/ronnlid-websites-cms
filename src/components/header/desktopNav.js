@@ -3,7 +3,7 @@ import "../../styles/desktopHeader.css"
 import { Link } from "gatsby"
 import IndexMenu from "./indexMenu"
 import Toggle from "../toggle"
-import { BasicButton } from "../styledComponents"
+import { BasicButton } from "../styledComponents/styledComponents"
 
 export default class DesktopNav extends Component {
   constructor(props) {

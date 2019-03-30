@@ -87,7 +87,7 @@ const Layout = ({ children, pageTitle, location, indexPage = false }) => (
             }}
           />
         </ImgRemoverOnSmallScreen>
-        <main style={{ width: "85vw", margin: "2.5rem auto 1rem auto" }}>
+        <main style={{ width: "85vw", margin: "0 auto 1rem auto" }}>
           <h1>{pageTitle}</h1>
           {children}
         </main>
