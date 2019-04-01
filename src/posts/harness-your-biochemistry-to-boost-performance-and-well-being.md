@@ -3,7 +3,7 @@ title: Harness your biochemistry to boost performance and well-being
 date: 2019-03-23T09:38:02.116Z
 image: /img/attractive-beautiful-cheerful-1536619.jpg
 ---
-Imagine walking on a bridge towards your most important opportunity ever, you're about to make it or loose it. Whether or not you will is highly affected by your mental state, whether you're anxious or excited. Your experience is dependent on your past neural network activity, (in ways we don't fully understand) feeding into the present neural network activity of your brain. Your current amounts of different building blocks for various neurotransmittors and the amount of deep sleep will also play a role in the level of fear, excitement or zen you feel. 
+Imagine walking on a bridge towards your most important opportunity ever, you're about to make it or lose it. Whether or not you will is highly affected by your mental state, whether you're anxious or excited. Your experience is dependent on your past neural network activity, (in ways we don't fully understand) feeding into the present neural network activity of your brain. Your current amounts of different building blocks for various neurotransmittors and the amount of deep sleep will also play a role in the level of fear, excitement or zen you feel. 
 
 Harnessing your biochemistry could mean using the thinking you've gotten into the habit of engaging in slightly differently. Just a mental shift from being the fear to being an observer of that content of consciousness can be a performance-booster and increase well-being significantly. That shift is biochemically dependent, to the exact same extent which the reduction in anxiety you may experience from alcohol or exercise is. 
 
