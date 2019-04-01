@@ -17,7 +17,7 @@ const HeaderContainer = styled.div`
     margin: 0 auto;
   }
   @media screen and (min-width: 1000px) {
-    margin: 0 auto;
+    margin: 0 auto 2.5rem auto;
     padding: 0;
     border: none;
     box-shadow: none;
