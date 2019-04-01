@@ -16,13 +16,13 @@ export class PostPage extends Component {
           title={data.markdownRemark.frontmatter.title}
           description="Learning to code? This post is only one of the vast array of front-end coding topics that are covered on the Ronnlid Websites blog, from the general to the specific."
         />
-        <Link to="/posts">
-          <BasicButton>
-            GO BACK TO <i>BLOG POSTS</i>
-          </BasicButton>
-        </Link>
 
         <div className="blogPost">
+          <Link to="/posts">
+            <BasicButton>
+              GO BACK TO <i>BLOG POSTS</i>
+            </BasicButton>
+          </Link>
           <h1>{data.markdownRemark.frontmatter.title}</h1>
           <span>{data.markdownRemark.frontmatter.date}</span>
           <div
