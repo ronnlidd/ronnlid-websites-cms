@@ -91,12 +91,11 @@ export default class IndexPage extends Component {
           </a>
           <p>
             Ronnlid Websites is based in Stockholm. It is owned and founded by
-            David Rönnlid, web developer (mainly front-end) & entrepreneur. My
-            vision is no less than a world where people are experiencing more
-            well-being. I try to boost love and reduce suffering by accruing
-            power to influence reality, including the society within which the
-            people who can experience more or less valuably exist. This company
-            & coding is a means to that end.
+            David Rönnlid, web developer (mainly front-end) & entrepreneur.
+            David is a driven person who wants to learn anything and everything.
+            I especially enjoy learning about business, coding and people. I
+            created the company for the purpose connecting with and learning
+            from people business related to the products of coding, websites.
           </p>
         </AboutDavid>
 
